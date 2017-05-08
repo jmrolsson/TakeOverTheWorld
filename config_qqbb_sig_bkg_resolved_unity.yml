@@ -1,0 +1,462 @@
+---
+# we can have text properties which specify what text to draw (think atlas, prelim, internal)
+# NOTE indentation matters
+#   # this one pulls in all of the reference that's pre-defined
+#   texts:
+#     - *atlas
+#   # this one merges the &internal with the current hash so everything but the label is the same
+#   texts:
+#     - label: preliminary
+#       <<: *internal
+#   texts:
+#     - x: <position>
+#       y: <position>
+#       font: <number> (for SetTextFont(...))
+#       size: <number> (for SetTextSize(...))
+#       label: <string> (what to actually say)
+
+atlas: &atlas
+  x: 0.64
+  y: 0.88
+  font: 73
+  size: 25
+  label: ATLAS
+
+internal: &internal
+  x: 0.75
+  font: 43
+  label: Internal
+  <<: *atlas
+
+atlasinternal: &atlasinternal
+  - *atlas
+  - *internal
+
+labeloptions: &labeloptions
+  xtitleoffset: 1.4
+  ytitleoffset: 1.4
+  xtitlesize: 0.05
+  ytitlesize: 0.05
+  xlabelsize: 0.05
+  ylabelsize: 0.05
+
+# top level defines the label / grouping
+# second level is a list of files under that group, one can also specify a wildcard to match files so they all get grouped
+# third level specifies extra information for a given file such as plots to ignore
+# groups:
+#   - name: <group name>
+#     files:
+#       - <a file path or a file pattern to match a set of files>
+#     styles:
+#       <name of style>: <value for style>
+#   - name: <group name>
+#     files: [file1, file2, ...]
+#     styles: {style1: val1, style2: val2, ...}
+
+# styles are set on all hists associated with that group
+# styles:
+#   - drawstyle (passed into Draw(...), think 'same' or 'hist')
+#   - legendstyle (passed into Legend(...), think 'F')
+#   - markercolor (also set with 'color')
+#   - markerstyle
+#   - markersize
+#   - fillcolor (also set with 'color')
+#   - fillstyle
+#   - linecolor (also set with 'color')
+#   - linestyle
+#   - linewidth
+#   - color (sets markercolor, fillcolor, linecolor)
+
+groups:
+#  - name: data
+#    files:
+#      - TA01_MBJ17-18-19/hist-user.*.*.physics_Main.*.root
+#    styles:
+#      legendstyle: p
+#      color: black
+#    do not scale me: true
+
+  - name: dijets
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/*361022*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/*361023*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/*361024*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/*361025*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/*361026*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/*361027*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/*361028*.hists
+    styles:
+      legendstyle: F
+      fillstyle: solid
+    stack it: false
+
+  - name: "t#bar{t}"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/*ttbar*.hists
+    styles:
+      legendstyle: F
+      fillstyle: solid
+    stack it: false
+
+  - name: "singletop"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/*singletop*.hists
+    styles:
+      legendstyle: F
+      fillstyle: solid
+    stack it: false
+
+  - name: "t#bar{t}+V"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/*topEW*.hists
+    styles:
+      legendstyle: F
+      fillstyle: solid
+    stack it: false
+
+  - name: "V+jets"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/*W_sherpa*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/*Z_sherpa*.hists
+    styles:
+      legendstyle: F
+      fillstyle: solid
+    stack it: false
+
+  - name: "diboson"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/*diboson*.hists
+    styles:
+      legendstyle: F
+      fillstyle: solid
+    stack it: false
+
+  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 150, m_{#tilde{#chi^{0}_{1}}} = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000010.MGPy8EG_A14N23LO_C1N2_Wh_150p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+    styles:
+      legendstyle: L
+      drawstyle: hist
+      linewidth: 2
+    stack it: false
+
+  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 300, m_{#tilde{#chi^{0}_{1}}} = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000009.MGPy8EG_A14N23LO_C1N2_Wh_300p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+    styles:
+      legendstyle: L
+      drawstyle: hist
+      linewidth: 2
+    stack it: false
+
+  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 300, m_{#tilde{#chi^{0}_{1}}} = 100"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000008.MGPy8EG_A14N23LO_C1N2_Wh_300p0_100p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+    styles:
+      legendstyle: L
+      drawstyle: hist
+      linewidth: 2
+    stack it: false
+
+  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 500, m_{#tilde{#chi^{0}_{1}}} = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000007.MGPy8EG_A14N23LO_C1N2_Wh_500p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+    styles:
+      legendstyle: L
+      drawstyle: hist
+      linewidth: 2
+    stack it: false
+
+  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 500, m_{#tilde{#chi^{0}_{1}}} = 100"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000006.MGPy8EG_A14N23LO_C1N2_Wh_500p0_100p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+    styles:
+      legendstyle: L
+      drawstyle: hist
+      linewidth: 2
+    stack it: false
+
+# plots:
+#   config:  # here we set global configurations that are applied uniformly such as...
+#     canvas:
+#     legend:
+#     texts:
+
+plots:
+  config:
+    #normalize: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 500, m_{#tilde{#chi^{0}_{1}}} = 100"
+    normalize: "unity"
+    texts:
+      - *atlas
+      - *internal
+      - &topline
+        x: 0.40
+        y: 0.88
+        font: 43
+        size: 15
+        label: "#sqrt{s} = 13 TeV, L_{int} #approx 35 pb^{-1}"
+    canvas:
+      width: 800
+      height: 600
+      rightmargin: 0.1
+      leftmargin: 0.15
+      bottommargin: 0.15
+      logy: false
+    legend:
+      numcolumns: 2
+      leftmargin: 0.2
+      topmargin: 0.085
+      rightmargin: 0.01
+      textsize: 14
+      entrysep: 0.01
+      entryheight: 0.02
+
+  paths:
+    hists/default/cutflow:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "cutflow"
+      ymin: 0
+      ymax: 3
+    # hists/default/n_vtx:
+    #   <<: *labeloptions
+    #   ylabel: Normalized to Unity
+    #   xlabel: "N_{vtx}"
+    #   ymin: 0
+    #   ymax: 0.2
+    # hists/default/average_int_per_crossing:
+    #   <<: *labeloptions
+    #   ylabel: Normalized to Unity
+    #   xlabel: "<#mu>"
+    #   ymin: 0
+    #   ymax: 0.20
+    hists/default/jets_n:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "jet multiplicity"
+      ymin: 0
+      ymax: 1.0
+    hists/default/bjets_n:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "b-jet multiplicity (77 eff)"
+      xmin: 0
+      xmax: 5
+      ymin: 0
+      ymax: 1.2
+    # hists/default/bjets_n_85:
+    #   <<: *labeloptions
+    #   ylabel: Normalized to Unity
+    #   xlabel: "b-jet multiplicity (85 eff)"
+    #   xmin: 0
+    #   xmax: 5
+    #   ymin: 0
+    #   ymax: 1.2
+    hists/default/met:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "E_{T}^{miss}"
+      xmin: 10
+      xmax: 800
+      ymin: 0
+      ymax: 0.25
+      rebin: 2
+    hists/default/met:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "E_{T}^{miss}"
+      xmin: 10
+      xmax: 800
+      ymin: 0.01
+      ymax: 1000
+      rebin: 2
+      canvas:
+        logy: true
+      plot tag: logy
+    hists/default/dphi_min:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "min_{i}#Delta#Phi(jet_{i}, E_{T}^{miss})"
+      ymin: 0
+      ymax: 0.15
+      # ymin: 0.01
+      # ymax: 1000
+      # canvas:
+      #   logy: true
+      # plot tag: logy
+    # hists/default/dphi_1jet:
+    #   <<: *labeloptions
+    #   ylabel: Normalized to Unity
+    #   xlabel: "min_{i}#Delta#Phi(leading-jet, E_{T}^{miss})"
+    #   ymin: 0
+    #   ymax: 0.3
+    hists/default/dphi_1jet:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "min_{i}#Delta#Phi(leading-jet, E_{T}^{miss})"
+      ymin: 0.01
+      ymax: 1000
+      canvas:
+        logy: true
+      plot tag: logy
+    # hists/default/dphi_sum4jet:
+    #   <<: *labeloptions
+    #   ylabel: Normalized to Unity
+    #   xlabel: "#Delta#Phi(di-boson, E_{T}^{miss})"
+    #   ymin: 0
+    #   ymax: 0.70
+    hists/default/dphi_sum4jet:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "#Delta#Phi(di-boson, E_{T}^{miss})"
+      ymin: 0.01
+      ymax: 1000
+      canvas:
+        logy: true
+      plot tag: logy
+    hists/default/pt_jet_1:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "pT^{jet}_{1}"
+      xmin: 10
+      xmax: 1000
+      rebin: 2
+    hists/default/pt_jet_2:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "pT^{jet}_{2}"
+      xmin: 10
+      xmax: 500
+      rebin: 2
+    hists/default/pt_jet_3:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "pT^{jet}_{3}"
+      xmin: 10
+      xmax: 200
+    hists/default/pt_jet_4:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "pT^{jet}_{4}"
+      xmin: 10
+      xmax: 200
+    hists/default/meff_4j:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "M_{eff}^{4j}"
+      xmin: 10
+      xmax: 1500
+      ymin: 0.1
+      ymax: 1500
+      rebin: 2
+      canvas:
+        logy: true
+      plot tag: logy
+    hists/default/minv_4j:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "M_{inv}^{4j}"
+      rebin: 2
+      xmin: 10
+      xmax: 1500
+      ymin: 0
+      ymax: 0.25
+      rebin: 2
+    hists/default/mT_4j:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "M_{T}^{4j}"
+      xmin: 10
+      xmax: 1500
+      ymin: 0.1
+      ymax: 1000
+      rebin: 1
+      canvas:
+        logy: true
+      plot tag: logy
+    hists/default/minv_bb:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "M_{inv}^{bb}"
+      rebin: 2
+      xmin: 10
+      xmax: 300
+      ymin: 0
+      ymax: 0.25
+      rebin: 1
+    hists/default/mT_bb:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "M_{T}^{bb}"
+      xmin: 10
+      xmax: 600
+      ymin: 0.1
+      ymax: 1000
+      rebin: 1
+      canvas:
+        logy: true
+      plot tag: logy
+    hists/default/mct_bb:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "M_{CT}^{bb}"
+      xmin: 10
+      xmax: 600
+      ymin: 0.1
+      ymax: 1000
+      rebin: 1
+      canvas:
+        logy: true
+      plot tag: logy
+    hists/default/mct_bb:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "M_{CT}^{bb}"
+      xmin: 10
+      xmax: 600
+      ymin: 0
+      ymax: 0.05
+      rebin: 1
+    hists/default/minv_non_bb:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "M_{inv}^{non-bb}"
+      rebin: 2
+      xmin: 10
+      xmax: 300
+      ymin: 0
+      ymax: 0.25
+      rebin: 1
+    hists/default/mT_non_bb:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "M_{T}^{non-bb}"
+      xmin: 10
+      xmax: 600
+      ymin: 0.1
+      ymax: 1000
+      rebin: 1
+      canvas:
+        logy: true
+      plot tag: logy
+    hists/default/mct_non_bb:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "M_{CT}^{non-bb}"
+      xmin: 10
+      xmax: 600
+      ymin: 0.1
+      ymax: 1000
+      rebin: 1
+      canvas:
+        logy: true
+      plot tag: logy
+    hists/default/mct_non_bb:
+      <<: *labeloptions
+      ylabel: Normalized to Unity
+      xlabel: "M_{CT}^{non-bb}"
+      xmin: 10
+      xmax: 600
+      ymin: 0
+      ymax: 0.10
+      rebin: 1

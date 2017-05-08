@@ -1,0 +1,502 @@
+---
+# we can have text properties which specify what text to draw (think atlas, prelim, internal)
+# NOTE indentation matters
+#   # this one pulls in all of the reference that's pre-defined
+#   texts:
+#     - *atlas
+#   # this one merges the &internal with the current hash so everything but the label is the same
+#   texts:
+#     - label: preliminary
+#       <<: *internal
+#   texts:
+#     - x: <position>
+#       y: <position>
+#       font: <number> (for SetTextFont(...))
+#       size: <number> (for SetTextSize(...))
+#       label: <string> (what to actually say)
+
+atlas: &atlas
+  x: 0.64
+  y: 0.88
+  font: 73
+  size: 25
+  label: ATLAS
+
+internal: &internal
+  x: 0.75
+  font: 43
+  label: Internal
+  <<: *atlas
+
+atlasinternal: &atlasinternal
+  - *atlas
+  - *internal
+
+labeloptions: &labeloptions
+  xtitleoffset: 1.4
+  ytitleoffset: 1.4
+  xtitlesize: 0.05
+  ytitlesize: 0.05
+  xlabelsize: 0.05
+  ylabelsize: 0.05
+
+# top level defines the label / grouping
+# second level is a list of files under that group, one can also specify a wildcard to match files so they all get grouped
+# third level specifies extra information for a given file such as plots to ignore
+# groups:
+#   - name: <group name>
+#     files:
+#       - <a file path or a file pattern to match a set of files>
+#     styles:
+#       <name of style>: <value for style>
+#   - name: <group name>
+#     files: [file1, file2, ...]
+#     styles: {style1: val1, style2: val2, ...}
+
+# styles are set on all hists associated with that group
+# styles:
+#   - drawstyle (passed into Draw(...), think 'same' or 'hist')
+#   - legendstyle (passed into Legend(...), think 'F')
+#   - markercolor (also set with 'color')
+#   - markerstyle
+#   - markersize
+#   - fillcolor (also set with 'color')
+#   - fillstyle
+#   - linecolor (also set with 'color')
+#   - linestyle
+#   - linewidth
+#   - color (sets markercolor, fillcolor, linecolor)
+
+groups:
+#  - name: data
+#    files:
+#      - TA01_MBJ17-18-19/hist-user.*.*.physics_Main.*.root
+#    styles:
+#      legendstyle: p
+#      color: black
+#    do not scale me: true
+
+  - name: dijets
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/*361022*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/*361023*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/*361024*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/*361025*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/*361026*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/*361027*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/*361028*.hists
+    styles:
+      legendstyle: F
+      fillstyle: solid
+    stack it: false
+
+  - name: "diboson"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/*diboson*.hists
+    styles:
+      legendstyle: F
+      fillstyle: solid
+    stack it: false
+
+  - name: "t#bar{t}"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/*ttbar*.hists
+    styles:
+      legendstyle: F
+      fillstyle: solid
+    stack it: false
+
+  - name: "singletop"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/*singletop*.hists
+    styles:
+      legendstyle: F
+      fillstyle: solid
+    stack it: false
+
+  - name: "t#bar{t}+V"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/*topEW*.hists
+    styles:
+      legendstyle: F
+      fillstyle: solid
+    stack it: false
+
+  - name: "V+jets"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/*W_sherpa*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/*Z_sherpa*.hists
+    styles:
+      legendstyle: F
+      fillstyle: solid
+    stack it: false
+
+  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 150, m_{#tilde{#chi^{0}_{1}}} = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/user.jolsson.mc15_13TeV.000010.MGPy8EG_A14N23LO_C1N2_Wh_150p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+    styles:
+      legendstyle: L
+      drawstyle: hist
+      linewidth: 2
+    stack it: false
+
+  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 300, m_{#tilde{#chi^{0}_{1}}} = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/user.jolsson.mc15_13TeV.000009.MGPy8EG_A14N23LO_C1N2_Wh_300p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+    styles:
+      legendstyle: L
+      drawstyle: hist
+      linewidth: 2
+    stack it: false
+
+  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 300, m_{#tilde{#chi^{0}_{1}}} = 100"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/user.jolsson.mc15_13TeV.000008.MGPy8EG_A14N23LO_C1N2_Wh_300p0_100p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+    styles:
+      legendstyle: L
+      drawstyle: hist
+      linewidth: 2
+    stack it: false
+
+  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 500, m_{#tilde{#chi^{0}_{1}}} = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/user.jolsson.mc15_13TeV.000007.MGPy8EG_A14N23LO_C1N2_Wh_500p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+    styles:
+      legendstyle: L
+      drawstyle: hist
+      linewidth: 2
+    stack it: false
+
+  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 500, m_{#tilde{#chi^{0}_{1}}} = 100"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/user.jolsson.mc15_13TeV.000006.MGPy8EG_A14N23LO_C1N2_Wh_500p0_100p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+    styles:
+      legendstyle: L
+      drawstyle: hist
+      linewidth: 2
+    stack it: false
+
+# plots:
+#   config:  # here we set global configurations that are applied uniformly such as...
+#     canvas:
+#     legend:
+#     texts:
+
+plots:
+  config:
+    #normalize: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 500, m_{#tilde{#chi^{0}_{1}}} = 100"
+    normalize: "unity"
+    texts:
+      - *atlas
+      - *internal
+      - &topline
+        x: 0.40
+        y: 0.88
+        font: 43
+        size: 15
+        label: "#sqrt{s} = 13 TeV, L_{int} #approx 35 pb^{-1}"
+    canvas:
+      width: 800
+      height: 600
+      logy: false
+    legend:
+      numcolumns: 2
+      leftmargin: 0.2
+      topmargin: 0.085
+      rightmargin: 0.01
+      textsize: 14
+      entrysep: 0.01
+      entryheight: 0.02
+
+  paths:
+    hists/default/cutflow:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "cutflow"
+      ymin: 0
+      ymax: 3
+    hists/default/dphi_sum4jet:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "#Delta#Phi(di-boson, E_{T}^{miss})"
+      # ymin: 0
+      # ymax: 0.6
+      ymin: 0.01
+      ymax: 1000
+      canvas:
+        logy: true
+      plot tag: logy
+    hists/default/meff_4j:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "M_{eff}^{4j}"
+      xmin: 0
+      xmax: 1500
+      ymin: 0.1
+      ymax: 1500
+      rebin: 2
+      canvas:
+        logy: true
+      plot tag: logy
+    hists/default/jets_n:
+      <<: *labeloptions
+      xmin: 0
+      xmax: 10
+      ymin: 0
+      ymax: 1.0
+      ylabel: Arb. Units
+      xlabel: "jet multiplicity"
+    hists/default/ak10_jets_n:
+      <<: *labeloptions
+      xmin: 0
+      xmax: 5
+      ymin: 0
+      ymax: 1.2
+      ylabel: Arb. Units
+      xlabel: "fat-jet multiplicity"
+    hists/default/ak10_jets_assoc_ak4_n:
+      <<: *labeloptions
+      xmin: 0
+      xmax: 5
+      ymin: 0
+      ymax: 1.2
+      ylabel: Arb. Units
+      xlabel: "number of jets associated with a fat-jet"
+    hists/default/ak10_jets_assoc_ak4_btag_n:
+      <<: *labeloptions
+      xmin: 0
+      xmax: 5
+      ymin: 0
+      ymax: 1.2
+      ylabel: Arb. Units
+      xlabel: "number of b-jets associated with a fat-jet"
+    hists/default/ak10_jets_assoc_ak4_non_btag_n:
+      <<: *labeloptions
+      xmin: 0
+      xmax: 5
+      ymin: 0
+      ymax: 1.2
+      ylabel: Arb. Units
+      xlabel: "number of non-b-jets associated with a fat-jet"
+    hists/default/met:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "E_{T}^{miss}"
+      xmin: 0
+      xmax: 800
+      ymin: 0
+      ymax: 0.25
+      rebin: 2
+    hists/default/ak10_pt_jet_1:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "pT^{fat-jet}_{1}"
+      xmin: 0
+      xmax: 1000
+      ymin: 0.01
+      ymax: 10000
+      rebin: 2
+      canvas:
+        logy: true
+      plot tag: logy
+    hists/default/ak10_pt_jet_2:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "pT^{fat-jet}_{2}"
+      xmin: 0
+      xmax: 1000
+      ymin: 0.01
+      ymax: 10000
+      rebin: 2
+      canvas:
+        logy: true
+      plot tag: logy
+    hists/default/ak10_pt_jet_3:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "pT^{fat-jet}_{3}"
+      xmin: 0
+      xmax: 1000
+      ymin: 0.01
+      ymax: 10000
+      rebin: 2
+      canvas:
+        logy: true
+      plot tag: logy
+    hists/default/ak10_m_jet_1:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "m^{fat-jet}_{1}"
+      xmin: 0
+      xmax: 250
+      ymin: 0
+      ymax: 0.25
+      rebin: 1
+    hists/default/ak10_m_jet_2:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "m^{fat-jet}_{2}"
+      xmin: 0
+      xmax: 250
+      ymin: 0
+      ymax: 0.25
+      rebin: 1
+    hists/default/ak10_m_jet_3:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "m^{fat-jet}_{3}"
+      xmin: 0
+      xmax: 250
+      ymin: 0
+      ymax: 0.25
+      rebin: 1
+    # hists/default/ak10_SPLIT121:
+    #   <<: *labeloptions
+    #   ylabel: Arb. Units
+    #   xlabel: "#sqrt{d12}_{1}"
+    #   xmin: 0
+    #   xmax: 200
+    #   rebin: 2
+    # hists/default/ak10_SPLIT122:
+    #   <<: *labeloptions
+    #   ylabel: Arb. Units
+    #   xlabel: "#sqrt{d12}_{2}"
+    #   xmin: 0
+    #   xmax: 200
+    #   rebin: 2
+    # hists/default/ak10_SPLIT123:
+    #   <<: *labeloptions
+    #   ylabel: Arb. Units
+    #   xlabel: "#sqrt{d12}_{3}"
+    #   xmin: 0
+    #   xmax: 200
+    #   rebin: 2
+    # hists/default/ak10_SPLIT231:
+    #   <<: *labeloptions
+    #   ylabel: Arb. Units
+    #   xlabel: "#sqrt{d23}_{1}"
+    #   xmin: 0
+    #   xmax: 100
+    #   rebin: 2
+    # hists/default/ak10_SPLIT232:
+    #   <<: *labeloptions
+    #   ylabel: Arb. Units
+    #   xlabel: "#sqrt{d23}_{2}"
+    #   xmin: 0
+    #   xmax: 100
+    #   rebin: 2
+    # hists/default/ak10_SPLIT233:
+    #   <<: *labeloptions
+    #   ylabel: Arb. Units
+    #   xlabel: "#sqrt{d23}_{3}"
+    #   xmin: 0
+    #   xmax: 100
+    #   rebin: 2
+    hists/default/ak10_tau211:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "#tau_{211}"
+      xmin: 0
+      xmax: 1
+      ymin: 0
+      ymax: 0.15
+      rebin: 2
+    hists/default/ak10_tau212:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "#tau_{212}"
+      xmin: 0
+      xmax: 1
+      ymin: 0
+      ymax: 0.15
+      rebin: 2
+    # hists/default/ak10_tau213:
+    #   <<: *labeloptions
+    #   ylabel: Arb. Units
+    #   xlabel: "#tau_{213}"
+    #   xmin: 0
+    #   xmax: 1
+    #   ymin: 0
+    #   ymax: 0.15
+    #   rebin: 2
+    hists/default/ak10_tau321:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "#tau_{321}"
+      xmin: 0
+      xmax: 1
+      ymin: 0
+      ymax: 0.15
+      rebin: 2
+    hists/default/ak10_tau322:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "#tau_{322}"
+      xmin: 0
+      xmax: 1
+      ymin: 0
+      ymax: 0.15
+      rebin: 2
+    # hists/default/ak10_tau323:
+    #   <<: *labeloptions
+    #   ylabel: Arb. Units
+    #   xlabel: "#tau_{323}"
+    #   xmin: 0
+    #   xmax: 1
+    #   ymin: 0
+    #   ymax: 0.15
+    #   rebin: 2
+    hists/default/ak10_C2_jet_1:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "C2_{1}"
+      xmin: 0
+      xmax: 1
+      ymin: 0
+      ymax: 0.2
+      rebin: 2
+    hists/default/ak10_C2_jet_2:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "C2_{2}"
+      xmin: 0
+      xmax: 1
+      ymin: 0
+      ymax: 0.2
+      rebin: 2
+    # hists/default/ak10_C2_jet_3:
+    #   <<: *labeloptions
+    #   ylabel: Arb. Units
+    #   xlabel: "C2_{3}"
+    #   xmin: 0
+    #   xmax: 1
+    #   ymin: 0
+    #   ymax: 0.2
+    #   rebin: 2
+    hists/default/ak10_D2_jet_1:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "D2_{1}"
+      xmin: 0
+      xmax: 5
+      ymin: 0
+      ymax: 0.2
+      rebin: 2
+    hists/default/ak10_D2_jet_2:
+      <<: *labeloptions
+      ylabel: Arb. Units
+      xlabel: "D2_{2}"
+      xmin: 0
+      xmax: 5
+      ymin: 0
+      ymax: 0.2
+      rebin: 2
+    # hists/default/ak10_D2_jet_3:
+    #   <<: *labeloptions
+    #   ylabel: Arb. Units
+    #   xlabel: "D2_{3}"
+    #   xmin: 0
+    #   xmax: 5
+    #   ymin: 0
+    #   ymax: 0.2
+    #   rebin: 2

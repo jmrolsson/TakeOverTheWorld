@@ -1,0 +1,25 @@
+{
+  "cuts": [
+    {"cut": "1", 
+      "name": "default"},
+    {"cut": "electrons_n==0 && muons_n==0 && jets_n >= 4 && ak10_jets_n >= 2 && ak10_assoc_ak4_btag_n_h >= 1 && ak10_dphi_sum2jet > 2 && ak10_pt_jet_1 > 200 && ak10_pt_jet_2 > 200 && mettst > 300 && ak10_meff_2j > 200 && ak10_D2_W < 1.5  && ak10_m_h > 75 && ak10_m_h < 150 && ak10_m_W > 50 && ak10_m_W < 120", 
+    "name": "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG300_MeffG200_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120"},
+    {"cut": "electrons_n==0 && muons_n==0 && jets_n >= 4 && ak10_jets_n >= 2 && ak10_assoc_ak4_btag_n_h >= 1 && ak10_dphi_sum2jet > 2 && ak10_pt_jet_1 > 200 && ak10_pt_jet_2 > 200 && mettst > 350 && ak10_meff_2j > 150 && ak10_D2_W < 1.5  && ak10_m_h > 75 && ak10_m_h < 150 && ak10_m_W > 50 && ak10_m_W < 120",
+    "name": "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG350_MeffG150_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120"},
+    {"cut": "electrons_n==0 && muons_n==0 && jets_n >= 4 && ak10_jets_n >= 2 && ak10_assoc_ak4_btag_n_h >= 1 && ak10_dphi_sum2jet > 2 && ak10_pt_jet_1 > 200 && ak10_pt_jet_2 > 200 && mettst > 250 && ak10_meff_2j > 800 && ak10_D2_W < 1.5  && ak10_m_h > 75 && ak10_m_h < 150 && ak10_m_W > 50 && ak10_m_W < 120",
+    "name": "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG250_MeffG800_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120"},
+    {"cut": "electrons_n==0 && muons_n==0 && jets_n >= 4 && ak10_jets_n >= 2 && ak10_assoc_ak4_btag_n_h >= 1 && ak10_dphi_sum2jet > 2 && ak10_pt_jet_1 > 200 && ak10_pt_jet_2 > 200 && mettst > 550 && ak10_meff_2j > 1000 && ak10_D2_W < 5.5  && ak10_m_h > 75 && ak10_m_h < 150 && ak10_m_W > 50 && ak10_m_W < 120",
+    "name": "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG550_MeffG1000_ak10jetD2WG5p5_ak10jetMHiggsG75L150_ak10jetMWG50L120"},
+    {"cut": "electrons_n==0 && muons_n==0 && jets_n >= 4 && ak10_jets_n >= 2 && ak10_assoc_ak4_btag_n_h >= 1 && ak10_dphi_sum2jet > 2 && ak10_pt_jet_1 > 200 && ak10_pt_jet_2 > 200 && mettst > 200 && ak10_meff_2j > 1000 && ak10_D2_W < 3.0 && ak10_m_h > 75 && ak10_m_h < 150 && ak10_m_W > 50 && ak10_m_W < 120",
+    "name": "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG200_MeffG1000_ak10jetD2WG3p0_ak10jetMHiggsG75L150_ak10jetMWG50L120"}
+  ],
+  "draw": [
+    {
+      "draw": "n_vtx",
+      "name": "cutflow",
+      "min": -1e8,
+      "max": 1e8,
+      "nbins": 1
+    }
+  ]
+}

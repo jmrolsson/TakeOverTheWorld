@@ -1,0 +1,223 @@
+{
+  "cuts": [{"cut": "1", "name": "default"},
+    {"cut": "met > 150", "name": "METg150"},
+    {"cut": "met > 150 && jets_n >=4", "name": "METg150_and_jetNgeq4"},
+    {"cut": "met > 150 && jets_n >=4 && bjets_n >= 1", "name": "METg150_and_jetNgeq4_and_bJetNgeq1"},
+    {"cut": "met > 150 && jets_n >=4 && bjets_n >= 2", "name": "METg150_and_jetNgeq4_and_bJetNgeq2"},
+    {"cut": "met > 150 && jets_n >=4 && bjets_n >= 2 && dphi_min > 1", "name": "METg150_and_jetNgeq4_and_bJetNgeq2_dPhiming1"},
+   {"cut": "met > 150 && jets_n >=4 && bjets_n >= 2 && minv_bb > 90 && minv_bb < 150", "name": "METg150_and_jetNgeq4_and_bJetNgeq2_mInvbbg90l150"},
+    {"cut": "met > 150 && jets_n >=4 && bjets_n >= 2 && dphi_min > 1 && minv_bb > 90 && minv_bb < 150", "name": "METg150_and_jetNgeq4_and_bJetNgeq2_dPhiming1_mInvbbg90l150"}
+  ],
+  "draw": [
+    {
+      "draw": "n_vtx",
+      "name": "cutflow",
+      "min": -1e8,
+      "max": 1e8,
+      "nbins": 1
+    },
+    {
+      "draw": "n_vtx",
+      "name": "n_vtx",
+      "min": 0,
+      "max": 40,
+      "nbins": 40
+    },
+    {
+      "draw": "average_int_per_crossing",
+      "name": "average_int_per_crossing",
+      "min": 0,
+      "max": 40,
+      "nbins": 40
+    },
+    {
+      "draw": "jets_n",
+      "name": "jets_n",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "bjets_n",
+      "name": "bjets_n",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "bjets_n_60",
+      "name": "bjets_n_60",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "bjets_n_70",
+      "name": "bjets_n_70",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "bjets_n_77",
+      "name": "bjets_n_77",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "bjets_n_85",
+      "name": "bjets_n_85",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "pt_jet_1",
+      "name": "pt_jet_1",
+      "min": 0,
+      "max": 2000,
+      "nbins": 200
+    },
+    {
+      "draw": "pt_jet_2",
+      "name": "pt_jet_2",
+      "min": 0,
+      "max": 2000,
+      "nbins": 200
+    },
+    {
+      "draw": "pt_jet_3",
+      "name": "pt_jet_3",
+      "min": 0,
+      "max": 2000,
+      "nbins": 200
+    },
+    {
+      "draw": "pt_jet_4",
+      "name": "pt_jet_4",
+      "min": 0,
+      "max": 2000,
+      "nbins": 200
+    },
+    {
+      "draw": "pt_bjet_1",
+      "name": "pt_bjet_1",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "pt_bjet_2",
+      "name": "pt_bjet_2",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "pt_bjet_3",
+      "name": "pt_bjet_3",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "pt_bjet_4",
+      "name": "pt_bjet_4",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "dphi_min",
+      "name": "dphi_min",
+      "min": 0,
+      "max": 4,
+      "nbins": 40
+    },
+    {
+      "draw": "dphi_1jet",
+      "name": "dphi_1jet",
+      "min": 0,
+      "max": 4,
+      "nbins": 40
+    },
+    {
+      "draw": "dphi_sum4jet",
+      "name": "dphi_sum4jet",
+      "min": 0,
+      "max": 4,
+      "nbins": 40
+    },
+    {
+      "draw": "met",
+      "name": "met",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "meff_4j",
+      "name": "meff_4j",
+      "min": 0,
+      "max": 3000,
+      "nbins": 300
+    },
+    {
+      "draw": "minv_4j",
+      "name": "minv_4j",
+      "min": 0,
+      "max": 3000,
+      "nbins": 300
+    },
+    {
+      "draw": "mT_4j",
+      "name": "mT_4j",
+      "min": 0,
+      "max": 3000,
+      "nbins": 300
+    },
+    {
+      "draw": "minv_bb",
+      "name": "minv_bb",
+      "min": 0,
+      "max": 2000,
+      "nbins": 200
+    },
+    {
+      "draw": "mT_bb",
+      "name": "mT_bb",
+      "min": 0,
+      "max": 2000,
+      "nbins": 200
+    },
+    {
+      "draw": "mct_bb",
+      "name": "mct_bb",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "minv_non_bb",
+      "name": "minv_non_bb",
+      "min": 0,
+      "max": 2000,
+      "nbins": 200
+    },
+    {
+      "draw": "mT_non_bb",
+      "name": "mT_non_bb",
+      "min": 0,
+      "max": 2000,
+      "nbins": 200
+    },
+    {
+      "draw": "mct_non_bb",
+      "name": "mct_non_bb",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    }
+  ]
+}

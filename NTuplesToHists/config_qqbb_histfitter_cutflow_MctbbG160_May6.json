@@ -1,0 +1,15 @@
+{
+  "cuts": [
+    {"cut": "baseline_electrons_n==0 && baseline_muons_n==0 && met>250 && jets_n>=3 && jets_n<=5 && bjets_n>=1 && bjets_n<=2 && dphi_sum4jet>2.6 && minv_bb>90 && minv_bb<150 && minv_non_bb>50 && minv_non_bb<120 && meff_4j > 800 && mct_bb > 160", 
+      "name": "metG250_nJetsGeq3Leq5_nBJetsGeq1Leq2_dphiSum4jetG2p6_MinvbbG90L150_MinvNonbbG50L120_MeffG800_MctbbG160"}
+  ],
+  "draw": [
+    {
+      "draw": "n_vtx",
+      "name": "cutflow",
+      "min": -1e8,
+      "max": 1e8,
+      "nbins": 1
+    }
+  ]
+}

@@ -9,6 +9,11 @@ from rootpy.tree import Tree, TreeChain
 
 import argparse
 
+def ensure_dir(f):
+    d = os.path.dirname(f)
+    if not os.path.exists(d):
+        os.makedirs(d)
+
 parser = argparse.ArgumentParser(description='Author: G. Stark')
 parser.add_argument('files', type=str, nargs='+', metavar='<file.root>', help='ROOT files containing the jigsaw information. Histograms will be drawn and saved in the file.')
 parser.add_argument('--config', required=True, type=str, dest='config', metavar='<file.json>', help='json file containing configurations for making histograms')
@@ -16,6 +21,8 @@ parser.add_argument('--out_tdirectory', required=False, type=str, dest='outdir',
 parser.add_argument('--treename', required=False, type=str, dest='treename', metavar='', help='Tree containing the ntuple information', default='oTree')
 parser.add_argument('--eventWeight', required=False, type=str, dest='eventWeightBranch', metavar='', help='Event Weight Branch name', default='weight')
 parser.add_argument('--newOutputs', action='store_true', default=False, help='create new output files for histograms')
+parser.add_argument('--doNotOverwrite', action='store_true', default=False, help='skip existing .hists files')
+parser.add_argument('-o', required=False, type=str, dest='output_folder', metavar='', help='Specify folder where to store output files', default='')
 
 # parse the arguments, throw errors if missing any
 args = parser.parse_args()
@@ -26,13 +33,19 @@ for f in args.files:
   print "opening {0}".format(f)
   if args.newOutputs:
     in_file = root_open(f, "READ")
-    out_file = root_open(f+".hists", "RECREATE")
+    out_file_path = f+".hists"
+    if args.output_folder != '':
+      ensure_dir(args.output_folder)
+      out_file_path = os.path.join(args.output_folder, os.path.basename(f)+".hists")
+    if (args.doNotOverwrite and os.path.isfile(out_file_path)): continue
+    out_file = root_open(out_file_path, "RECREATE")
     tree = in_file.get(args.treename)
   else:
     out_file = root_open(f, "UPDATE")
     tree = out_file.get(args.treename)
   # create tdirectory and cd into it
   print "\tmaking tdirectory {0}".format(args.outdir)
+
 
   # for each thing to draw, we want to apply a selection on them too
   for cut in config['cuts']:

@@ -1,0 +1,171 @@
+{
+  "cuts": [
+    {"cut": "1", 
+      "name": "default"},
+    {"cut": "electrons_n==0 && muons_n==0 && mettst>150 && jets_n>=4 && jets_n<=6 && ak10_jets_pt[0]>250 && ak10_jets_pt[1]>250 && dphi_sum4jet>2 && ak10_jets_m[0]>75 && ak10_jets_m[0]<150 && ak10_jets_m[1]>50 && ak10_jets_m[1]<120",
+      "name": "metG150_nJetsGeq4Leq6_ak10jetpT12G250_dphiSum4jetG2_ak10jetM1G75L150_ak10jetM2G50L120"}
+  ],
+  "draw": [
+    {
+      "draw": "n_vtx",
+      "name": "cutflow",
+      "min": -1e8,
+      "max": 1e8,
+      "nbins": 1
+    },
+    {
+      "draw": "jets_n",
+      "name": "jets_n",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "dphi_sum4jet",
+      "name": "dphi_sum4jet",
+      "min": 0,
+      "max": 4,
+      "nbins": 40
+    },
+    {
+      "draw": "mettst",
+      "name": "met",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "meff_4j",
+      "name": "meff_4j",
+      "min": 0,
+      "max": 3000,
+      "nbins": 300
+    },
+    {
+      "draw": "ak10_jets_n",
+      "name": "ak10_jets_n",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "ak10_jets_assoc_ak4_n",
+      "name": "ak10_jets_assoc_ak4_n",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "ak10_jets_assoc_ak4_btag_n",
+      "name": "ak10_jets_assoc_ak4_btag_n",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "ak10_jets_assoc_ak4_non_btag_n",
+      "name": "ak10_jets_assoc_ak4_non_btag_n",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "ak10_jets_pt[0]",
+      "name": "ak10_pt_jet_1",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "ak10_jets_pt[1]",
+      "name": "ak10_pt_jet_2",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "ak10_jets_pt[2]",
+      "name": "ak10_pt_jet_3",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "ak10_jets_m[0]",
+      "name": "ak10_m_jet_1",
+      "min": 0,
+      "max": 400,
+      "nbins": 80
+    },
+    {
+      "draw": "ak10_jets_m[1]",
+      "name": "ak10_m_jet_2",
+      "min": 0,
+      "max": 400,
+      "nbins": 80
+    },
+    {
+      "draw": "ak10_jets_m[2]",
+      "name": "ak10_m_jet_3",
+      "min": 0,
+      "max": 400,
+      "nbins": 80
+    },
+    {
+      "draw": "ak10_jets_tau21[0]",
+      "name": "ak10_tau211",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "ak10_jets_tau21[1]",
+      "name": "ak10_tau212",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "ak10_jets_tau32[0]",
+      "name": "ak10_tau321",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "ak10_jets_tau32[1]",
+      "name": "ak10_tau322",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "ak10_jets_C2[0]",
+      "name": "ak10_C2_jet_1",
+      "min": 0,
+      "max": 1.0,
+      "nbins": 100
+    },
+    {
+      "draw": "ak10_jets_C2[1]",
+      "name": "ak10_C2_jet_2",
+      "min": 0,
+      "max": 1.0,
+      "nbins": 100
+    },
+    {
+      "draw": "ak10_jets_D2[0]",
+      "name": "ak10_D2_jet_1",
+      "min": 0,
+      "max": 5.0,
+      "nbins": 100
+    },
+    {
+      "draw": "ak10_jets_D2[1]",
+      "name": "ak10_D2_jet_2",
+      "min": 0,
+      "max": 5.0,
+      "nbins": 100
+    }
+  ]
+}

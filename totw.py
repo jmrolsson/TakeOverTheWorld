@@ -45,11 +45,14 @@ import json
 
 # Set up ROOT
 import ROOT
+ROOT.PyConfig.IgnoreCommandLineOptions = True
 
 #root_numpy
 import numpy as np
 import root_numpy as rnp
 import rootpy as rpy
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as pl
 from rootpy.io import root_open
 from rootpy.plotting.style import set_style, get_style
@@ -140,10 +143,22 @@ def set_label(hist, config):
     get_axis(hist, 'y').title = config.get('ylabel', get_axis(subhist, 'y').title)
     xtitleoffset = config.get('xtitleoffset', None)
     ytitleoffset = config.get('ytitleoffset', None)
+    xtitlesize = config.get('xtitlesize', None)
+    ytitlesize = config.get('ytitlesize', None)
+    xlabelsize = config.get('xlabelsize', None)
+    ylabelsize = config.get('ylabelsize', None)
     if xtitleoffset:
       get_axis(hist, 'x').SetTitleOffset(xtitleoffset)
     if ytitleoffset:
       get_axis(hist, 'y').SetTitleOffset(ytitleoffset)
+    if xtitlesize:
+      get_axis(hist, 'x').SetTitleSize(xtitlesize)
+    if ytitlesize:
+      get_axis(hist, 'y').SetTitleSize(ytitlesize)
+    if xlabelsize:
+      get_axis(hist, 'x').SetLabelSize(xlabelsize)
+    if ylabelsize:
+      get_axis(hist, 'y').SetLabelSize(ylabelsize)
 
 did_regex = re.compile('(\d{6,8})')
 def get_did(hist):
@@ -258,7 +273,10 @@ if __name__ == "__main__":
         # create a legend (an entry for each group)
         legendConfigs = copy.copy(plots_config.get('legend', {}))
         legendConfigs.update(plots_path.get('legend', {}))
+        legend_numColumns = legendConfigs.get('numcolumns', 1)
+        if "numcolumns" in legendConfigs: del legendConfigs['numcolumns']
         legend = Legend(len(h), **legendConfigs)
+        legend.SetNColumns(legend_numColumns)
 
         # scale the histograms before doing anything else
         for hgroup in h:
@@ -268,7 +286,10 @@ if __name__ == "__main__":
           for hist in hgroup:
             # scale the histograms, look up weights by did
             did = get_did(hist)
+            print("!!!!!!!!")
+            print(did)
             weight = weights.get(did)
+            print(weight)
             if weight is None:
               raise KeyError("Could not find the weights for did=%s" % did)
             scaleFactor = 1.0
@@ -280,7 +301,12 @@ if __name__ == "__main__":
             scaleFactor *= weight.get('k-factor')
             scaleFactor *= args.global_luminosity*1000
             scaleFactor *= groups.get(hgroup.group).get('scale factor', 1.0)
+            print("weight", scaleFactor)
+            print("entries, before: ", hist.GetEntries())
+            print("bin content, before: ", hist.GetBinContent(1))
             hist.scale(scaleFactor)
+            print("entries, after", hist.GetEntries())
+            print("bin content, after", hist.GetBinContent(1))
             logger.info("Scale factor for %s: %0.6f" % (did, scaleFactor))
 
         # set a list of colors to loop through if not set
@@ -330,18 +356,26 @@ if __name__ == "__main__":
         normalizeTo = plots_path.get('normalize', plots_config.get('normalize', None))
         if normalizeTo is not None:
           dataScale = 0.
-          if normalizeTo not in [hist.title for hist in soloHists]: raise ValueError("Could not find %s as a solo hist for normalizing to." % normalizeTo)
-          for hist in soloHists:
-            if hist.title == normalizeTo: dataScale = hist.integral()
-          mcScale = 0.
-          for hist in hstack:
-            mcScale += hist.integral()
-          if mcScale != 0.:
-            normalizeFactor = dataScale/mcScale
+          if "unity" in normalizeTo:
+            for hist in hstack:
+              if (hist.integral() != 0):
+                hist.scale(1.0/hist.integral())
+            for hist in soloHists:
+              if (hist.integral() != 0):
+                hist.scale(1.0/hist.integral())
           else:
-            normalizeFactor = 1.
-          for hist in hstack:
-            hist.scale(normalizeFactor)
+            if normalizeTo not in [hist.title for hist in soloHists]: raise ValueError("Could not find %s as a solo hist for normalizing to." % normalizeTo)
+            for hist in soloHists:
+              if hist.title == normalizeTo: dataScale = hist.integral()
+            mcScale = 0.
+            for hist in hstack:
+              mcScale += hist.integral()
+            if mcScale != 0.:
+              normalizeFactor = dataScale/mcScale
+            else:
+              normalizeFactor = 1.
+            for hist in hstack:
+              hist.scale(normalizeFactor)
 
         # cycle through all draw options and make sure we don't overwrite
         drawOptions = ["same"]*len(soloHists)
@@ -429,6 +463,9 @@ if __name__ == "__main__":
         # make file_name and directories if needed
         file_name = "plots/{0:s}".format(h.path)
         print("Saving {0:s}... \r".format(file_name), end='\r')
+        plot_tag = plots_path.get('plot tag', None)
+        if plot_tag is not None:
+          file_name += '_'+plot_tag
         ensure_dir(file_name)
         for file_ext in ["root", "pdf"]:
           canvas.SaveAs("{0:s}.{1:s}".format(file_name, file_ext))

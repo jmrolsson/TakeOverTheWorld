@@ -1,0 +1,25 @@
+{
+  "cuts": [
+    {"cut": "baseline_electrons_n==0 && baseline_muons_n==0 && met>350 && jets_n==4 && bjets_n>=1 && bjets_n<=2 && dphi_sum4jet>2.6 && minv_bb>90 && minv_bb<150 && minv_non_bb>50 && minv_non_bb<120 && meff_4j > 1000 && mct_bb > 240",
+    "name": "metG350_nJetsEq4_nBJetsGeq1Leq2_dphiSum4jetG2p6_MinvbbG90L150_MinvNonbbG50L120_MeffG1000_MctbbG240"},
+    {"cut": "baseline_electrons_n==0 && baseline_muons_n==0 && met>350 && jets_n==4 && bjets_n>=1 && bjets_n<=2 && dphi_sum4jet>2.6 && minv_bb>90 && minv_bb<150 && minv_non_bb>50 && minv_non_bb<120 && meff_4j > 1000 && mct_bb > 280",
+    "name": "metG350_nJetsEq4_nBJetsGeq1Leq2_dphiSum4jetG2p6_MinvbbG90L150_MinvNonbbG50L120_MeffG1000_MctbbG280"},
+    {"cut": "baseline_electrons_n==0 && baseline_muons_n==0 && met>350 && jets_n>=4 && jets_n <= 6 && bjets_n>=1 && bjets_n<=2 && dphi_sum4jet>2.6 && minv_bb>90 && minv_bb<150 && minv_non_bb>50 && minv_non_bb<120 && meff_4j > 1000 && mct_bb > 280",
+    "name": "metG350_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2p6_MinvbbG90L150_MinvNonbbG50L120_MeffG1000_MctbbG280"},
+    {"cut": "baseline_electrons_n==0 && baseline_muons_n==0 && met>250 && jets_n==4 && bjets_n>=1 && bjets_n<=2 && dphi_sum4jet>2.6 && minv_bb>90 && minv_bb<150 && minv_non_bb>50 && minv_non_bb<120 && meff_4j > 1000 && mct_bb > 280",
+    "name": "metG350_nJetsEq4_nBJetsGeq1Leq2_dphiSum4jetG2p6_MinvbbG90L150_MinvNonbbG50L120_MeffG1000_MctbbG280"},
+    {"cut": "baseline_electrons_n==0 && baseline_muons_n==0 && met>350 && jets_n==4 && bjets_n>=1 && bjets_n<=2 && dphi_sum4jet>2.6 && minv_bb>90 && minv_bb<150 && minv_non_bb>50 && minv_non_bb<120 && meff_4j > 500 && mct_bb > 280",
+    "name": "metG350_nJetsEq4_nBJetsGeq1Leq2_dphiSum4jetG2p6_MinvbbG90L150_MinvNonbbG50L120_MeffG500_MctbbG280"},
+    {"cut": "baseline_electrons_n==0 && baseline_muons_n==0 && met>150 && jets_n==4 && bjets_n>=1 && bjets_n<=2 && dphi_sum4jet>2.6 && minv_bb>90 && minv_bb<150 && minv_non_bb>50 && minv_non_bb<120 && meff_4j > 700 && mct_bb > 280",
+    "name": "metG150_nJetsGeq4Leq5_nBJetsGeq1Leq2_dphiSum4jetG2p6_MinvbbG90L150_MinvNonbbG50L120_MeffG700_MctbbG280"}
+  ],
+  "draw": [
+    {
+      "draw": "n_vtx",
+      "name": "cutflow",
+      "min": -1e8,
+      "max": 1e8,
+      "nbins": 1
+    }
+  ]
+}

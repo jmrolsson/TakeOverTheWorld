@@ -1,0 +1,23 @@
+{
+  "cuts": [
+    {"cut": "1", 
+      "name": "default"},
+    {"cut": "electrons_n==0 && muons_n==0 && mettst>150 && jets_n>=4 && jets_n<=6 && ak10_jets_pt[0]>250 && ak10_jets_pt[1]>250 && dphi_sum4jet>2 && ak10_jets_m[0]>75 && ak10_jets_m[0]<150 && ak10_jets_m[1]>50 && ak10_jets_m[1]<120",
+      "name": "metG150_nJetsGeq4Leq6_ak10jetpT12G250_dphiSum4jetG2_ak10jetM1G75L150_ak10jetM2G50L120"},
+    {"cut": "electrons_n==0 && muons_n==0 && mettst>400 && jets_n>=4 && jets_n<=6 && ak10_jets_n>=0 && ak10_jets_n<=2 && ak10_jets_pt[0]>250 && ak10_jets_pt[1]>250 && dphi_sum4jet>2 && ak10_jets_m[0]>75 && ak10_jets_m[0]<150 && ak10_jets_m[1]>50 && ak10_jets_m[1]<120 && meff_4j > 700",
+      "name": "metG400_nJetsGeq4Leq6_nak10JetsGeq0Leq2_ak10jetpT12G250_dphiSum4jetG2_ak10jetM1G75L150_ak10jetM2G50L120_MeffG700"},
+    {"cut": "electrons_n==0 && muons_n==0 && mettst>350 && jets_n>=4 && jets_n<=6 && ak10_jets_n>=0 && ak10_jets_n<=2 && ak10_jets_pt[0]>250 && ak10_jets_pt[1]>250 && dphi_sum4jet>2 && ak10_jets_m[0]>75 && ak10_jets_m[0]<150 && ak10_jets_m[1]>50 && ak10_jets_m[1]<120 && meff_4j > 700",
+      "name": "metG350_nJetsGeq4Leq6_nak10JetsGeq0Leq2_ak10jetpT12G250_dphiSum4jetG2_ak10jetM1G75L150_ak10jetM2G50L120_MeffG700"},
+    {"cut": "electrons_n==0 && muons_n==0 && mettst>200 && jets_n>=4 && jets_n<=6 && ak10_jets_n>=2 && ak10_jets_n<=3 && ak10_jets_pt[0]>250 && ak10_jets_pt[1]>250 && dphi_sum4jet>2 && ak10_jets_m[0]>75 && ak10_jets_m[0]<150 && ak10_jets_m[1]>50 && ak10_jets_m[1]<120 && meff_4j > 900",
+      "name": "metG200_nJetsGeq4Leq6_nak10JetsGeq2Leq3_ak10jetpT12G250_dphiSum4jetG2_ak10jetM1G75L150_ak10jetM2G50L120_MeffG900"}
+  ],
+  "draw": [
+    {
+      "draw": "n_vtx",
+      "name": "cutflow",
+      "min": -1e8,
+      "max": 1e8,
+      "nbins": 1
+    }
+  ]
+}
