@@ -159,7 +159,6 @@
     },
     {
       "draw": "dphi_sum4jet",
-      "name": "dphi_sum4jet",
       "min": 0,
       "max": 4,
       "nbins": 40
@@ -191,6 +190,13 @@
       "min": 0,
       "max": 1000,
       "nbins": 100
+    },
+    {
+      "draw": "meff_incl",
+      "name": "meff_incl",
+      "min": 0,
+      "max": 3000,
+      "nbins": 300
     },
     {
       "draw": "meff_4j",

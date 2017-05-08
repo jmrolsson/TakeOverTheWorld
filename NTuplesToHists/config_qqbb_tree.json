@@ -1,13 +1,18 @@
 {
+<<<<<<< HEAD
   "cuts": [
     {"cut": "1", 
       "name": "default"},
     {"cut": "electrons_n == 0 && muons_n == 0 && mettst > 200 && jets_n >=4 && jets_n <=5 && ak10_jets_pt[0]>250 && ak10_jets_pt[1]>250 && ak10_jets_assoc_ak4_btag_n>=1 && ak10_jets_assoc_ak4_btag_n<=2",
       "name": "metG200_nJetsGeq4Leq5_ak10jetpT12G250_nAssocBGeq1Leq2"}
+=======
+  "cuts": [{"cut": "1", "name": "default"}
+>>>>>>> 3a6d092a651055787284b3e0f452b55e0dfd6e08
   ],
   "draw": [
     {
       "draw": "n_vtx",
+<<<<<<< HEAD
       "name": "cutflow",
       "min": -1e8,
       "max": 1e8,
@@ -15,6 +20,8 @@
     },
     {
       "draw": "n_vtx",
+=======
+>>>>>>> 3a6d092a651055787284b3e0f452b55e0dfd6e08
       "name": "n_vtx",
       "min": 0,
       "max": 40,
@@ -63,6 +70,7 @@
       "nbins": 200
     },
     {
+<<<<<<< HEAD
       "draw": "dphi_min",
       "name": "dphi_min",
       "min": 0,
@@ -154,6 +162,8 @@
       "nbins": 100
     },
     {
+=======
+>>>>>>> 3a6d092a651055787284b3e0f452b55e0dfd6e08
       "draw": "ht_jets",
       "name": "ht_jets",
       "min": 0,
