@@ -11,7 +11,15 @@
     {"cut": "electrons_n==0 && muons_n==0 && jets_n >= 4 && ak10_jets_n >= 2 && ak10_assoc_ak4_btag_n_h >= 1 && ak10_dphi_sum2jet > 2 && ak10_pt_jet_1 > 200 && ak10_pt_jet_2 > 200 && mettst > 550 && ak10_meff_2j > 1000 && ak10_D2_W < 5.5  && ak10_m_h > 75 && ak10_m_h < 150 && ak10_m_W > 50 && ak10_m_W < 120",
     "name": "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG550_MeffG1000_ak10jetD2WG5p5_ak10jetMHiggsG75L150_ak10jetMWG50L120"},
     {"cut": "electrons_n==0 && muons_n==0 && jets_n >= 4 && ak10_jets_n >= 2 && ak10_assoc_ak4_btag_n_h >= 1 && ak10_dphi_sum2jet > 2 && ak10_pt_jet_1 > 200 && ak10_pt_jet_2 > 200 && mettst > 200 && ak10_meff_2j > 1000 && ak10_D2_W < 3.0 && ak10_m_h > 75 && ak10_m_h < 150 && ak10_m_W > 50 && ak10_m_W < 120",
-    "name": "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG200_MeffG1000_ak10jetD2WG3p0_ak10jetMHiggsG75L150_ak10jetMWG50L120"}
+    "name": "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG200_MeffG1000_ak10jetD2WG3p0_ak10jetMHiggsG75L150_ak10jetMWG50L120"},
+    {"cut": "electrons_n==0 && muons_n==0 && jets_n >= 4 && ak10_jets_n >= 2 && ak10_assoc_ak4_btag_n_h >= 1 && ak10_dphi_sum2jet > 2 && ak10_pt_jet_1 > 200 && ak10_pt_jet_2 > 200 && mettst > 500 && ak10_meff_2j > 950 && ak10_D2_W < 2.5 && ak10_m_h > 75 && ak10_m_h < 150 && ak10_m_W > 50 && ak10_m_W < 120",
+    "name": "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG500_MeffG950_ak10jetD2WG2p5_ak10jetMHiggsG75L150_ak10jetMWG50L120"},
+    {"cut": "electrons_n==0 && muons_n==0 && jets_n >= 4 && ak10_jets_n >= 2 && ak10_assoc_ak4_btag_n_h >= 1 && ak10_dphi_sum2jet > 2 && ak10_pt_jet_1 > 200 && ak10_pt_jet_2 > 200 && mettst > 450 && ak10_meff_2j > 1000 && ak10_D2_W < 2.0 && ak10_m_h > 75 && ak10_m_h < 150 && ak10_m_W > 50 && ak10_m_W < 120",
+    "name": "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG450_MeffG1000_ak10jetD2WG2p0_ak10jetMHiggsG75L150_ak10jetMWG50L120"},
+    {"cut": "electrons_n==0 && muons_n==0 && jets_n >= 4 && ak10_jets_n >= 2 && ak10_assoc_ak4_btag_n_h >= 1 && ak10_dphi_sum2jet > 2 && ak10_pt_jet_1 > 200 && ak10_pt_jet_2 > 200 && mettst > 400 && ak10_meff_2j > 900 && ak10_D2_W < 1.5 && ak10_m_h > 75 && ak10_m_h < 150 && ak10_m_W > 50 && ak10_m_W < 120",
+    "name": "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG400_MeffG900_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120"},
+    {"cut": "electrons_n==0 && muons_n==0 && jets_n >= 4 && ak10_jets_n >= 2 && ak10_assoc_ak4_btag_n_h >= 1 && ak10_dphi_sum2jet > 2 && ak10_pt_jet_1 > 200 && ak10_pt_jet_2 > 200 && mettst > 400 && ak10_meff_2j > 850 && ak10_D2_W < 1.5 && ak10_m_h > 75 && ak10_m_h < 150 && ak10_m_W > 50 && ak10_m_W < 120",
+    "name": "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG400_MeffG850_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120"}
   ],
   "draw": [
     {

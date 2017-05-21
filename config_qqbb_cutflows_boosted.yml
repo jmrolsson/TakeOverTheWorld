@@ -24,104 +24,141 @@ backgrounds:
   #     - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361027*.flattened.hists
   #     - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361028*.flattened.hists
 
-#   - name: "dijet_JZ1W"
-#     files:
-#       - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361021*.flattened.hists
-#   - name: "dijet_JZ2W"
-#     files:
-#       - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361022*.flattened.hists
-#   - name: "dijet_JZ3W"
-#     files:
-#       - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361023*.flattened.hists
-#   - name: "dijet_JZ4W"
-#     files:
-#       - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361024*.flattened.hists
-#   - name: "dijet_JZ5W"
-#     files:
-#       - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361025*.flattened.hists
-#   - name: "dijet_JZ6W"
-#     files:
-#       - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361026*.flattened.hists
-#   - name: "dijet_JZ7W"
-#     files:
-#       - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361027*.flattened.hists
-#   - name: "dijet_JZ8W"
-#     files:
-#       - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361028*.flattened.hists
-#
-#   - name: "diboson"
-#     files:
-#       - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*diboson*.flattened.hists
-#
-#   # - name: "t#bar{t}"
-#   - name: "ttbar"
-#     files:
-#       - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*ttbar*.flattened.hists
-#
-#   - name: "singletop"
-#     files:
-#       - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*singletop*.flattened.hists
-#
-#   # - name: "t#bar{t}+V"
-#   - name: "ttbar+V"
-#     files:
-#       - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*topEW*.flattened.hists
-#
-#   - name: "W+jets"
-#     files:
-#       - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter_cutflow_May2/*W_sherpa*.hists
-#
-#   - name: "Z+jets"
-#     files:
-#       - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter_cutflow_May2/*Z_sherpa*.hists
-#
-# # defined analogously for signal samples
-# # one group per signal sample is required
-# signals:
-#
-#   # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 150, m_{#tilde{#chi^{0}_{1}}} = 0"
-#   - name: "m_C1/N2 = 150, m_N2 = 0"
-#     files:
-#       - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/user.jolsson.mc15_13TeV.000010.MGPy8EG_A14N23LO_C1N2_Wh_150p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.flattened.hists
+  - name: "dijet_JZ1W"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361021*.flattened.hists
+  - name: "dijet_JZ2W"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361022*.flattened.hists
+  - name: "dijet_JZ3W"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361023*.flattened.hists
+  - name: "dijet_JZ4W"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361024*.flattened.hists
+  - name: "dijet_JZ5W"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361025*.flattened.hists
+  - name: "dijet_JZ6W"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361026*.flattened.hists
+  - name: "dijet_JZ7W"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361027*.flattened.hists
+  - name: "dijet_JZ8W"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*361028*.flattened.hists
+
+  - name: "diboson"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*diboson*.flattened.hists
+
+  # - name: "t#bar{t}"
+  - name: "ttbar"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*ttbar*.flattened.hists
+
+  - name: "singletop"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*singletop*.flattened.hists
+
+  # - name: "t#bar{t}+V"
+  - name: "ttbar+V"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*topEW*.flattened.hists
+
+  - name: "W+jets"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*W_sherpa*.hists
+
+  - name: "Z+jets"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/*Z_sherpa*.hists
+
+# defined analogously for signal samples
+# one group per signal sample is required
+signals:
+
+ # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 150, m_{#tilde{#chi^{0}_{1}}} = 0"
+  - name: "m_C1/N2 = 150, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/user.jolsson.mc15_13TeV.000010.MGPy8EG_A14N23LO_C1N2_Wh_150p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.flattened.hists
 
   # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 300, m_{#tilde{#chi^{0}_{1}}} = 0"
   - name: "m_C1/N2 = 300, m_N2 = 0"
     files:
       - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/user.jolsson.mc15_13TeV.000009.MGPy8EG_A14N23LO_C1N2_Wh_300p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.flattened.hists
 
-  # # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 300, m_{#tilde{#chi^{0}_{1}}} = 100"
-  # - name: "m_C1/N2 = 300, m_N2 = 100"
-  #   files:
-  #     - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/user.jolsson.mc15_13TeV.000008.MGPy8EG_A14N23LO_C1N2_Wh_300p0_100p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.flattened.hists
-  #
-  # # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 500, m_{#tilde{#chi^{0}_{1}}} = 0"
-  # - name: "m_C1/N2 = 500, m_N2 = 0"
-  #   files:
-  #     - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/user.jolsson.mc15_13TeV.000007.MGPy8EG_A14N23LO_C1N2_Wh_500p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.flattened.hists
-  #
-  # # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 500, m_{#tilde{#chi^{0}_{1}}} = 100"
-  # - name: "m_C1/N2 = 500, m_N2 = 100"
-  #   files:
-  #     - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/user.jolsson.mc15_13TeV.000006.MGPy8EG_A14N23LO_C1N2_Wh_500p0_100p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.flattened.hists
+  # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 300, m_{#tilde{#chi^{0}_{1}}} = 100"
+  - name: "m_C1/N2 = 300, m_N2 = 100"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/user.jolsson.mc15_13TeV.000008.MGPy8EG_A14N23LO_C1N2_Wh_300p0_100p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.flattened.hists
+
+  # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 500, m_{#tilde{#chi^{0}_{1}}} = 0"
+  - name: "m_C1/N2 = 500, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/user.jolsson.mc15_13TeV.000007.MGPy8EG_A14N23LO_C1N2_Wh_500p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.flattened.hists
+
+  # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 500, m_{#tilde{#chi^{0}_{1}}} = 100"
+  - name: "m_C1/N2 = 500, m_N2 = 100"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/user.jolsson.mc15_13TeV.000006.MGPy8EG_A14N23LO_C1N2_Wh_500p0_100p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.flattened.hists
+
+  # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 600, m_{#tilde{#chi^{0}_{1}}} = 0"
+  - name: "m_C1/N2 = 600, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/user.jolsson.mc15_13TeV.000014.MGPy8EG_A14N23LO_C1N2_Wh_600p0_0p0_bbqq_J10.DAOD_SUSY10.20170506_2.1.1.1_EXT0.merged.flattened.hists
+
+  # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 700, m_{#tilde{#chi^{0}_{1}}} = 0"
+  - name: "m_C1/N2 = 700, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/user.jolsson.mc15_13TeV.000013.MGPy8EG_A14N23LO_C1N2_Wh_700p0_0p0_bbqq_J10.DAOD_SUSY10.20170506_2.1.1.1_EXT0.merged.flattened.hists
+
+  # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 800, m_{#tilde{#chi^{0}_{1}}} = 0"
+  - name: "m_C1/N2 = 800, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/user.jolsson.mc15_13TeV.000012.MGPy8EG_A14N23LO_C1N2_Wh_800p0_0p0_bbqq_J10.DAOD_SUSY10.20170506_2.1.1.1_EXT0.merged.flattened.hists
+
+  # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 800, m_{#tilde{#chi^{0}_{1}}} = 200"
+  - name: "m_C1/N2 = 800, m_N2 = 200"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree_cutflow_May2/user.jolsson.mc15_13TeV.000011.MGPy8EG_A14N23LO_C1N2_Wh_800p0_200p0_bbqq_J10.DAOD_SUSY10.20170506_2.1.1.1_EXT0.merged.flattened.hists
 
 # specify the path to each cutflow histogram
 # one cutflow will be saved for each path
 cutflows:
   paths:
-    hists/default/cutflow:
-      label: "Default"
+    # hists/default/cutflow:
+    #   outfile: "./cutflows_boosted/default.txt"
+    #   label: "Default"
     # hists/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG300_MeffG200_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120/cutflow:
-    #   outfile: "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG300_MeffG200_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120"
+    #   outfile: "./cutflows_boosted/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG300_MeffG200_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120.txt"
     #   label: "MET > 300 GeV, Meff > 200 GeV, N_jets >= 4, N_ak10_jets >= 2, N_ak10_associated_ak4_btag_Higgs >= 1, dPhi(diboson,MET) > 2, ak10_pt_jet_12 > 200 GeV, ak10_D2_W < 1.5, 75 < ak10_mass_Higgs/GeV < 150, 50 < ak10_mass_W/GeV < 120" 
     # hists/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG350_MeffG150_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120/cutflow:
-    #   outfile: "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG350_MeffG150_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120"
+    #   outfile: "./cutflows_boosted/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG350_MeffG150_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120.txt"
     #   label: "MET > 350 GeV, Meff > 150 GeV, N_jets >= 4, N_ak10_jets >= 2, N_ak10_associated_ak4_btag_Higgs >= 1, dPhi(diboson,MET) > 2, ak10_pt_jet_12 > 200 GeV, ak10_D2_W < 1.5, 75 < ak10_mass_Higgs/GeV < 150, 50 < ak10_mass_W/GeV < 120" 
     # hists/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG250_MeffG800_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120/cutflow:
-    #   outfile: "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG250_MeffG800_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120"
+    #   outfile: "./cutflows_boosted/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG250_MeffG800_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120.txt"
     #   label: "MET > 250 GeV, Meff > 800 GeV, N_jets >= 4, N_ak10_jets >= 2, N_ak10_associated_ak4_btag_Higgs >= 1, dPhi(diboson,MET) > 2, ak10_pt_jet_12 > 200 GeV, ak10_D2_W < 1.5, 75 < ak10_mass_Higgs/GeV < 150, 50 < ak10_mass_W/GeV < 120" 
     # hists/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG550_MeffG1000_ak10jetD2WG5p5_ak10jetMHiggsG75L150_ak10jetMWG50L120/cutflow:
-    #   outfile: "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG550_MeffG1000_ak10jetD2WG5p5_ak10jetMHiggsG75L150_ak10jetMWG50L120"
+    #   outfile: "./cutflows_boosted/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG550_MeffG1000_ak10jetD2WG5p5_ak10jetMHiggsG75L150_ak10jetMWG50L120.txt"
     #   label: "MET > 550 GeV, Meff > 1000 GeV, N_jets >= 4, N_ak10_jets >= 2, N_ak10_associated_ak4_btag_Higgs >= 1, dPhi(diboson,MET) > 2, ak10_pt_jet_12 > 200 GeV, ak10_D2_W < 5.5, 75 < ak10_mass_Higgs/GeV < 150, 50 < ak10_mass_W/GeV < 120" 
     # hists/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG200_MeffG1000_ak10jetD2WG3p0_ak10jetMHiggsG75L150_ak10jetMWG50L120/cutflow:
-    #   outfile: "nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG200_MeffG1000_ak10jetD2WG3p0_ak10jetMHiggsG75L150_ak10jetMWG50L120"
+    #   outfile: "./cutflows_boosted/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG200_MeffG1000_ak10jetD2WG3p0_ak10jetMHiggsG75L150_ak10jetMWG50L120.txt"
     #   label: "MET > 200 GeV, Meff > 1000 GeV,N_jets >= 4, N_ak10_jets >= 2, N_ak10_associated_ak4_btag_Higgs >= 1, dPhi(diboson,MET) > 2, ak10_pt_jet_12 > 200 GeV, ak10_D2_W < 3.0, 75 < ak10_mass_Higgs/GeV < 150, 50 < ak10_mass_W/GeV < 120" 
+    # hists/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG500_MeffG950_ak10jetD2WG2p5_ak10jetMHiggsG75L150_ak10jetMWG50L120/cutflow:
+    #   outfile: ".cutflows_boosted/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG500_MeffG950_ak10jetD2WG2p5_ak10jetMHiggsG75L150_ak10jetMWG50L120.txt"
+    #   label: "MET > 500 GeV, Meff > 950 GeV,N_jets >= 4, N_ak10_jets >= 2, N_ak10_associated_ak4_btag_Higgs >= 1, dPhi(diboson,MET) > 2, ak10_pt_jet_12 > 200 GeV, ak10_D2_W < 2.5, 75 < ak10_mass_Higgs/GeV < 150, 50 < ak10_mass_W/GeV < 120" 
+    # hists/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG450_MeffG1000_ak10jetD2WG2p0_ak10jetMHiggsG75L150_ak10jetMWG50L120/cutflow:
+    #   outfile: "./cutflows_boosted/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG450_MeffG1000_ak10jetD2WG2p0_ak10jetMHiggsG75L150_ak10jetMWG50L120.txt"
+    #   label: "MET > 450 GeV, Meff > 1000 GeV,N_jets >= 4, N_ak10_jets >= 2, N_ak10_associated_ak4_btag_Higgs >= 1, dPhi(diboson,MET) > 2, ak10_pt_jet_12 > 200 GeV, ak10_D2_W < 2.0, 75 < ak10_mass_Higgs/GeV < 150, 50 < ak10_mass_W/GeV < 120" 
+    # hists/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG400_MeffG900_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120/cutflow:
+    #   outfile: "./cutflows_boosted/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG400_MeffG900_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120.txt"
+    #   label: "MET > 400 GeV, Meff > 900 GeV,N_jets >= 4, N_ak10_jets >= 2, N_ak10_associated_ak4_btag_Higgs >= 1, dPhi(diboson,MET) > 2, ak10_pt_jet_12 > 200 GeV, ak10_D2_W < 1.5, 75 < ak10_mass_Higgs/GeV < 150, 50 < ak10_mass_W/GeV < 120" 
+
+    hists/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG400_MeffG900_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120/cutflow:
+      outfile: "./cutflows_boosted/nJetsGeq4_nAK10JetsGeq2_nAssocBtagHiggsGeq1_dphiSum2ak10jetG2_ak10jetpT12G200_metG400_MeffG900_ak10jetD2WG1p5_ak10jetMHiggsG75L150_ak10jetMWG50L120_100infb.txt"
+      label: "MET > 400 GeV, Meff > 900 GeV,N_jets >= 4, N_ak10_jets >= 2, N_ak10_associated_ak4_btag_Higgs >= 1, dPhi(diboson,MET) > 2, ak10_pt_jet_12 > 200 GeV, ak10_D2_W < 1.5, 75 < ak10_mass_Higgs/GeV < 150, 50 < ak10_mass_W/GeV < 120" 
+
+
+

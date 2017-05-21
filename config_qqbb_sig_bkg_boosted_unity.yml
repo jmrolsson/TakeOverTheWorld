@@ -16,14 +16,14 @@
 #       label: <string> (what to actually say)
 
 atlas: &atlas
-  x: 0.64
-  y: 0.88
+  x: 0.65
+  y: 0.65
   font: 73
   size: 25
   label: ATLAS
 
 internal: &internal
-  x: 0.75
+  x: 0.77
   font: 43
   label: Internal
   <<: *atlas
@@ -176,6 +176,33 @@ groups:
       linewidth: 2
     stack it: false
 
+  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 600, m_{#tilde{#chi^{0}_{1}}} = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/user.jolsson.mc15_13TeV.000014.MGPy8EG_A14N23LO_C1N2_Wh_600p0_0p0_bbqq_J10.DAOD_SUSY10.20170506_2.1.1.1_EXT0.merged.flattened.hists
+    styles:
+      legendstyle: L
+      drawstyle: hist
+      linewidth: 2
+    stack it: false
+
+  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 800, m_{#tilde{#chi^{0}_{1}}} = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/user.jolsson.mc15_13TeV.000012.MGPy8EG_A14N23LO_C1N2_Wh_800p0_0p0_bbqq_J10.DAOD_SUSY10.20170506_2.1.1.1_EXT0.merged.flattened.hists
+    styles:
+      legendstyle: L
+      drawstyle: hist
+      linewidth: 2
+    stack it: false
+
+  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 800, m_{#tilde{#chi^{0}_{1}}} = 200"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/tree/user.jolsson.mc15_13TeV.000011.MGPy8EG_A14N23LO_C1N2_Wh_800p0_200p0_bbqq_J10.DAOD_SUSY10.20170506_2.1.1.1_EXT0.merged.flattened.hists
+    styles:
+      legendstyle: L
+      drawstyle: hist
+      linewidth: 2
+    stack it: false
+
 # plots:
 #   config:  # here we set global configurations that are applied uniformly such as...
 #     canvas:
@@ -184,118 +211,117 @@ groups:
 
 plots:
   config:
-    #normalize: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 500, m_{#tilde{#chi^{0}_{1}}} = 100"
     normalize: "unity"
     texts:
       - *atlas
       - *internal
       - &topline
-        x: 0.40
-        y: 0.88
+        x: 0.65
+        y: 0.61
         font: 43
         size: 15
-        label: "#sqrt{s} = 13 TeV, L_{int} #approx 35 pb^{-1}"
+        label: "#sqrt{s} = 13 TeV, L_{int} #approx 35 fb^{-1}"
     canvas:
       width: 800
       height: 600
-      logy: false
+      logy: true
     legend:
       numcolumns: 2
-      leftmargin: 0.2
-      topmargin: 0.085
-      rightmargin: 0.01
-      textsize: 14
-      entrysep: 0.01
-      entryheight: 0.02
+      topmargin: 0.02
+      leftmargin: 0.02
+      rightmargin: 0.02
+      textsize: 18
+      entrysep: 0.005
+      entryheight: 0.01
 
   paths:
-    hists/default/cutflow:
-      <<: *labeloptions
-      ylabel: Arb. Units
-      xlabel: "cutflow"
-      ymin: 0
-      ymax: 3
-    hists/default/ak10_dphi_sum2jet:
-      <<: *labeloptions
-      ylabel: Arb. Units
-      xlabel: "#Delta#Phi(di-boson, E_{T}^{miss})"
-      # ymin: 0
-      # ymax: 0.6
-      ymin: 0.01
-      ymax: 1000
-      canvas:
-        logy: true
-      plot tag: logy
-    hists/default/ak10_meff_2j:
-      <<: *labeloptions
-      ylabel: Arb. Units
-      xlabel: "M_{eff}^{2J}"
-      xmin: 0
-      xmax: 1500
-      ymin: 0.1
-      ymax: 1500
-      rebin: 2
-      canvas:
-        logy: true
-      plot tag: logy
-    hists/default/ak10_jets_n:
-      <<: *labeloptions
-      xmin: 0
-      xmax: 5
-      ymin: 0
-      ymax: 1.2
-      ylabel: Arb. Units
-      xlabel: "fat-jet multiplicity"
-    hists/default/ak10_assoc_ak4_btag_n_h:
-      <<: *labeloptions
-      xmin: 0
-      xmax: 5
-      ymin: 0
-      ymax: 1.2
-      ylabel: Arb. Units
-      xlabel: "number of b-jets associated with a Higgs-candidate"
-    hists/default/met:
-      <<: *labeloptions
-      ylabel: Arb. Units
-      xlabel: "E_{T}^{miss}"
-      xmin: 0.1
-      xmax: 800
-      ymin: 0.01
-      ymax: 10000
-      rebin: 2
-      canvas:
-        logy: true
-      plot tag: logy
+    # hists/default/cutflow:
+    #   <<: *labeloptions
+    #   ylabel: Normalized to Unity
+    #   xlabel: "cutflow"
+    #   zmin: 0
+    #   ymax: 2
+    # hists/default/ak10_dphi_sum2jet:
+    #   <<: *labeloptions
+    #   ylabel: Normalized to Unity
+    #   xlabel: "#Delta#Phi(di-boson, E_{T}^{miss})"
+    #   # ymin: 0
+    #   # ymax: 0.6
+    #   ymin: 0.01
+    #   ymax: 1000
+    #   canvas:
+    #     logy: true
+    #   plot tag: logy
+    # hists/default/ak10_meff_2j:
+    #   <<: *labeloptions
+    #   ylabel: Normalized to Unity
+    #   xlabel: "M_{eff}^{2J}"
+    #   xmin: 0
+    #   xmax: 1500
+    #   ymin: 0.1
+    #   ymax: 1500
+    #   rebin: 2
+    #   canvas:
+    #     logy: true
+    #   plot tag: logy
+    # hists/default/ak10_jets_n:
+    #   <<: *labeloptions
+    #   xmin: 0
+    #   xmax: 5
+    #   ymin: 0.1
+    #   ymax: 1.2
+    #   ylabel: Normalized to Unity
+    #   xlabel: "fat-jet multiplicity"
+    # hists/default/ak10_assoc_ak4_btag_n_h:
+    #   <<: *labeloptions
+    #   xmin: 0
+    #   xmax: 5
+    #   ymin: 0.1
+    #   ymax: 1.2
+    #   ylabel: Normalized to Unity
+    #   xlabel: "number of b-jets associated with a Higgs-candidate"
+    # hists/default/met:
+    #   <<: *labeloptions
+    #   ylabel: Normalized to Unity
+    #   xlabel: "E_{T}^{miss}"
+    #   xmin: 0.1
+    #   xmax: 800
+    #   ymin: 0.01
+    #   ymax: 10000
+    #   rebin: 2
+    #   canvas:
+    #     logy: true
+    #   plot tag: logy
     hists/default/ak10_m_h:
       <<: *labeloptions
-      ylabel: Arb. Units
+      ylabel: Normalized to Unity
       xlabel: "M_{Higgs}"
       xmin: 0
       xmax: 250
       ymin: 0.01
-      ymax: 1000
+      ymax: 10
       rebin: 2
       canvas:
         logy: true
       plot tag: logy
     hists/default/ak10_m_W:
       <<: *labeloptions
-      ylabel: Arb. Units
+      ylabel: Normalized to Unity
       xlabel: "M_{W}"
       xmin: 0
       xmax: 250
       ymin: 0.01
-      ymax: 1000
+      ymax: 10
       rebin: 2
       canvas:
         logy: true
       plot tag: logy
-    hists/default/ak10_D2_W:
-      <<: *labeloptions
-      ylabel: Arb. Units
-      xlabel: "D2_{W}"
-      xmin: 0
-      xmax: 5
-      ymin: 0.01
-      ymax: 0.3
-      rebin: 2
+    # hists/default/ak10_D2_W:
+    #   <<: *labeloptions
+    #   ylabel: Normalized to Unity
+    #   xlabel: "D2_{W}"
+    #   xmin: 0
+    #   xmax: 5
+    #   ymin: 0.01
+    #   ymax: 0.3
+    #   rebin: 2

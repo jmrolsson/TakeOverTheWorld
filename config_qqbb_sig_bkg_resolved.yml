@@ -16,14 +16,14 @@
 #       label: <string> (what to actually say)
 
 atlas: &atlas
-  x: 0.64
-  y: 0.88
+  x: 0.65
+  y: 0.65
   font: 73
   size: 25
   label: ATLAS
 
 internal: &internal
-  x: 0.75
+  x: 0.77
   font: 43
   label: Internal
   <<: *atlas
@@ -176,6 +176,33 @@ groups:
       linewidth: 2
     stack it: false
 
+  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 600, m_{#tilde{#chi^{0}_{1}}} = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000014.MGPy8EG_A14N23LO_C1N2_Wh_600p0_0p0_bbqq_J10.DAOD_SUSY10.20170506_2.1.1.1_EXT0.merged.hists
+    styles:
+      legendstyle: L
+      drawstyle: hist
+      linewidth: 2
+    stack it: false
+
+  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 800, m_{#tilde{#chi^{0}_{1}}} = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000012.MGPy8EG_A14N23LO_C1N2_Wh_800p0_0p0_bbqq_J10.DAOD_SUSY10.20170506_2.1.1.1_EXT0.merged.hists
+    styles:
+      legendstyle: L
+      drawstyle: hist
+      linewidth: 2
+    stack it: false
+
+  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 800, m_{#tilde{#chi^{0}_{1}}} = 200"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000011.MGPy8EG_A14N23LO_C1N2_Wh_800p0_200p0_bbqq_J10.DAOD_SUSY10.20170506_2.1.1.1_EXT0.merged.hists
+    styles:
+      legendstyle: L
+      drawstyle: hist
+      linewidth: 2
+    stack it: false
+
 # plots:
 #   config:  # here we set global configurations that are applied uniformly such as...
 #     canvas:
@@ -184,363 +211,152 @@ groups:
 
 plots:
   config:
-    #normalize: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 500, m_{#tilde{#chi^{0}_{1}}} = 100"
     texts:
       - *atlas
       - *internal
       - &topline
-        x: 0.40
-        y: 0.88
+        x: 0.65
+        y: 0.61
         font: 43
         size: 15
-        label: "#sqrt{s} = 13 TeV, L_{int} #approx 35 pb^{-1}"
+        label: "#sqrt{s} = 13 TeV, L_{int} #approx 35 fb^{-1}"
     canvas:
       width: 800
       height: 600
       logy: true
     legend:
       numcolumns: 2
-      leftmargin: 0.2
-      topmargin: 0.085
-      rightmargin: 0.01
-      textsize: 14
-      entrysep: 0.01
-      entryheight: 0.02
+      topmargin: 0.02
+      leftmargin: 0.02
+      rightmargin: 0.02
+      textsize: 18
+      entrysep: 0.005
+      entryheight: 0.01
 
   paths:
     hists/default/cutflow:
       xlabel: "Cutflow"
       ylabel: "Events"
       ymin: 1
-      ymax: 100000000000000000000000000
+      ymax: 100000000000000000000000
+      # ymax: 100000000
       plot tag: logy
     hists/default/jets_n:
       xmin: 0
-      xmax: 20
-      ymin: 0.001
-      ymax: 100000000000000
+      xmax: 10
+      ymin: 0.01
+      ymax: 1000000000000000000000
       ylabel: Events
       xlabel: "jet multiplicity"
       plot tag: logy
     hists/default/bjets_n:
       xmin: 0
-      xmax: 20
-      ymin: 0.001
-      ymax: 100000000000000
+      xmax: 10
+      ymin: 0.01
+      ymax: 1000000000000000000
       ylabel: Events
-      xlabel: "b-jet multiplicity (70 eff)"
+      xlabel: "b-jet multiplicity (77% eff)"
       plot tag: logy
     # hists/default/bjets_n_85:
     #   xmin: 0
-    #   xmax: 20
-    #   ymin: 0.001
-    #   ymax: 100000000000000
+    #   xmax: 10
+    #   ymin: 0.01
+    #   ymax: 1000000000000000000
     #   ylabel: Events
     #   xlabel: "b-jet multiplicity (85 eff)"
     #   plot tag: logy
-    hists/default/met:
-      xmin: 0
-      xmax: 1000
-      ymin: 0.0001
-      ymax: 100000000000000
-      ylabel: Events
-      xlabel: "E_{T}^{miss}"
-      plot tag: logy
-    hists/default/dphi_min:
-      xmin: 0
-      xmax: 4
-      ymin: 0.001
-      ymax: 100000000000000
-      ylabel: Events
-      xlabel: "min_{i}#Delta#Phi(jet_{i}, E_{T}^{miss})"
-      plot tag: logy
-    hists/default/dphi_1jet:
-      xmin: 0
-      xmax: 4
-      ymin: 0.001
-      ymax: 100000000000000
-      ylabel: Events
-      xlabel: "min_{i}#Delta#Phi(leading-jet, E_{T}^{miss})"
-      plot tag: logy
     hists/default/dphi_sum4jet:
       xmin: 0
-      xmax: 4
-      ymin: 0.001
-      ymax: 100000000000000
+      xmax: 3.14
+      ymin: 0.01
+      ymax: 100000000000000000000000
       ylabel: Events
       xlabel: "#Delta#Phi(di-boson, E_{T}^{miss})"
       plot tag: logy
-    hists/default/pt_jet_1:
+    hists/default/met:
       xmin: 0
-      xmax: 2500
-      ymin: 0.001
-      ymax: 100000000000000
+      xmax: 1000
+      ymin: 0.01
+      ymax: 1000000000000000000
       rebin: 2
       ylabel: Events
-      xlabel: "pT^{jet}_{1}"
-      plot tag: logy
-    hists/default/pt_jet_2:
-      xmin: 0
-      xmax: 2500
-      ymin: 0.001
-      ymax: 100000000000000
-      rebin: 2
-      ylabel: Events
-      xlabel: "pT^{jet}_{2}"
-      plot tag: logy
-    hists/default/pt_jet_3:
-      xmin: 0
-      xmax: 1500
-      ymin: 0.001
-      ymax: 100000000000000
-      rebin: 2
-      ylabel: Events
-      xlabel: "pT^{jet}_{3}"
-      plot tag: logy
-    hists/default/pt_jet_4:
-      xmin: 0
-      xmax: 1500
-      ymin: 0.001
-      ymax: 100000000000000
-      rebin: 2
-      ylabel: Events
-      xlabel: "pT^{jet}_{4}"
+      xlabel: "E_{T}^{miss}"
       plot tag: logy
     hists/default/meff_4j:
       xmin: 0
       xmax: 2500
-      ymin: 0.001
-      ymax: 100000000000000
-      rebin: 2
+      ymin: 0.01
+      ymax: 1000000000000000000
+      rebin: 4
       ylabel: Events
       xlabel: "M_{eff}^{4j}"
-      plot tag: logy
-    hists/default/minv_4j:
-      xmin: 0
-      xmax: 2500
-      ymin: 0.001
-      ymax: 100000000000000
-      rebin: 2
-      ylabel: Events
-      xlabel: "M_{inv}^{4j}"
       plot tag: logy
     hists/default/mT_4j:
       xmin: 0
       xmax: 2500
       ymin: 0.001
-      ymax: 100000000000000
-      rebin: 2
+      ymax: 1000000000000000000
+      rebin: 4
       ylabel: Events
       xlabel: "M_{T}^{4j}"
       plot tag: logy
+    hists/default/minv_2j:
+      xmin: 0
+      xmax: 2500
+      ymin: 0.001
+      ymax: 1000000000000000000
+      rebin: 4
+      ylabel: Events
+      xlabel: "M^{2j}"
+      plot tag: logy
+    hists/default/mT_2j:
+      xmin: 0
+      xmax: 2500
+      ymin: 0.001
+      ymax: 1000000000000000000
+      rebin: 4
+      ylabel: Events
+      xlabel: "M_{T}^{2j}"
+      plot tag: logy
     hists/default/minv_bb:
       ymin: 0.1
-      ymax: 10000000
+      ymax: 10000000000000000
       rebin: 2
       ylabel: Events
-      xlabel: "M_{inv}^{bb}"
+      xlabel: "M^{bb}"
       plot tag: logy
     hists/default/mT_bb:
       ymin: 0.1
-      ymax: 10000000
+      ymax: 10000000000000000
       rebin: 2
       ylabel: Events
       xlabel: "M_{T}^{bb}"
       plot tag: logy
     hists/default/mct_bb:
       ymin: 0.1
-      ymax: 10000000
+      ymax: 10000000000000000
       rebin: 2
       ylabel: Events
       xlabel: "M_{CT}^{bb}"
       plot tag: logy
     hists/default/minv_non_bb:
       ymin: 0.1
-      ymax: 1000000
+      ymax: 10000000000000000000
       rebin: 2
       ylabel: Events
-      xlabel: "M_{inv}^{non-bb}"
+      xlabel: "M^{non-bb}"
       plot tag: logy
     hists/default/mT_non_bb:
       ymin: 0.1
-      ymax: 10000000
+      ymax: 10000000000000000
       rebin: 2
       ylabel: Events
       xlabel: "M_{T}^{non-bb}"
       plot tag: logy
     hists/default/mct_non_bb:
       ymin: 0.1
-      ymax: 10000000
+      ymax: 10000000000000000
       rebin: 2
       ylabel: Events
       xlabel: "M_{CT}^{non-bb}"
-      plot tag: logy
-    
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/cutflow:
-    #   xlabel: "Cutflow"
-    #   ylabel: "Events"
-    #   ymin: 1
-    #   ymax: 100000000000
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/jets_n:
-    #   xmin: 0
-    #   xmax: 20
-    #   ymin: 0.001
-    #   ymax: 100000000000000
-    #   ylabel: Events
-    #   xlabel: "jet multiplicity"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/bjets_n:
-    #   xmin: 0
-    #   xmax: 20
-    #   ymin: 0.001
-    #   ymax: 100000000000000
-    #   ylabel: Events
-    #   xlabel: "b-jet multiplicity (70 eff)"
-    #   plot tag: logy
-    # # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/bjets_n_85:
-    # #   xmin: 0
-    # #   xmax: 20
-    # #   ymin: 0.001
-    # #   ymax: 100000000000000
-    # #   ylabel: Events
-    # #   xlabel: "b-jet multiplicity (85 eff)"
-    # #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/met:
-    #   xmin: 0
-    #   xmax: 1000
-    #   ymin: 0.0001
-    #   ymax: 100000000000000
-    #   rebin: 2
-    #   ylabel: Events
-    #   xlabel: "E_{T}^{miss}"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/dphi_min:
-    #   xmin: 0
-    #   xmax: 4
-    #   ymin: 0.001
-    #   ymax: 100000000000000
-    #   ylabel: Events
-    #   xlabel: "min_{i}#Delta#Phi(jet_{i}, E_{T}^{miss})"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/dphi_1jet:
-    #   xmin: 0
-    #   xmax: 4
-    #   ymin: 0.001
-    #   ymax: 100000000000000
-    #   ylabel: Events
-    #   xlabel: "min_{i}#Delta#Phi(leading-jet, E_{T}^{miss})"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/dphi_sum4jet:
-    #   xmin: 0
-    #   xmax: 4
-    #   ymin: 0.001
-    #   ymax: 100000000000000
-    #   ylabel: Events
-    #   xlabel: "#Delta#Phi(di-boson, E_{T}^{miss})"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/pt_jet_1:
-    #   xmin: 0
-    #   xmax: 2500
-    #   ymin: 0.001
-    #   ymax: 100000000000000
-    #   rebin: 2
-    #   ylabel: Events
-    #   xlabel: "pT^{jet}_{1}"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/pt_jet_2:
-    #   xmin: 0
-    #   xmax: 2500
-    #   ymin: 0.001
-    #   ymax: 100000000000000
-    #   rebin: 2
-    #   ylabel: Events
-    #   xlabel: "pT^{jet}_{2}"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/pt_jet_3:
-    #   xmin: 0
-    #   xmax: 1500
-    #   ymin: 0.001
-    #   ymax: 100000000000000
-    #   rebin: 2
-    #   ylabel: Events
-    #   xlabel: "pT^{jet}_{3}"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/pt_jet_4:
-    #   xmin: 0
-    #   xmax: 1500
-    #   ymin: 0.001
-    #   ymax: 100000000000000
-    #   rebin: 2
-    #   ylabel: Events
-    #   xlabel: "pT^{jet}_{4}"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/meff_4j:
-    #   xmin: 0
-    #   xmax: 2500
-    #   ymin: 0.001
-    #   ymax: 100000000000000
-    #   rebin: 4
-    #   ylabel: Events
-    #   xlabel: "M_{eff}^{4j}"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/minv_4j:
-    #   xmin: 0
-    #   xmax: 2500
-    #   ymin: 0.001
-    #   ymax: 100000000000000
-    #   rebin: 4
-    #   ylabel: Events
-    #   xlabel: "M_{inv}^{4j}"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/mT_4j:
-    #   xmin: 0
-    #   xmax: 2500
-    #   ymin: 0.001
-    #   ymax: 100000000000000
-    #   rebin: 2
-    #   ylabel: Events
-    #   xlabel: "M_{T}^{4j}"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/minv_bb:
-    #   ymin: 0.1
-    #   ymax: 100000
-    #   rebin: 2
-    #   ylabel: Events
-    #   xlabel: "M_{inv}^{bb}"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/mT_bb:
-    #   ymin: 0.1
-    #   ymax: 100000
-    #   rebin: 2
-    #   ylabel: Events
-    #   xlabel: "M_{T}^{bb}"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/mct_bb:
-    #   ymin: 0.1
-    #   ymax: 100000
-    #   rebin: 2
-    #   ylabel: Events
-    #   xlabel: "M_{CT}^{bb}"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/minv_non_bb:
-    #   ymin: 0.1
-    #   ymax: 10000
-    #   rebin: 2
-    #   ylabel: Events
-    #   xlabel: "M_{inv}^{non-bb}"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/mT_non_bb:
-    #   ymin: 0.1
-    #   ymax: 10000
-    #   rebin: 2
-    #   ylabel: Events
-    #   xlabel: "M_{T}^{non-bb}"
-    #   plot tag: logy
-    # hists/metG150_nJetsGeq4Leq6_nBJetsGeq1Leq2_dphiSum4jetG2_MinvbbG90L150_MinvNonbbG50L120/mct_non_bb:
-    #   ymin: 0.1
-    #   ymax: 10000
-    #   rebin: 2
-    #   ylabel: Events
-    #   xlabel: "M_{CT}^{non-bb}"
-    #   plot tag: logy
+      plot tag: logy 

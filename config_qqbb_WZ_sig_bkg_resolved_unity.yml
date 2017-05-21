@@ -133,7 +133,7 @@ groups:
 
   - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 150, m_{#tilde{#chi^{0}_{1}}} = 0"
     files:
-      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000010.MGPy8EG_A14N23LO_C1N2_Wh_150p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000005.MGPy8EG_A14N23LO_C1N2_WZ_150p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
     styles:
       legendstyle: L
       drawstyle: hist
@@ -142,7 +142,7 @@ groups:
 
   - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 300, m_{#tilde{#chi^{0}_{1}}} = 0"
     files:
-      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000009.MGPy8EG_A14N23LO_C1N2_Wh_300p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000004.MGPy8EG_A14N23LO_C1N2_WZ_300p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
     styles:
       legendstyle: L
       drawstyle: hist
@@ -151,7 +151,7 @@ groups:
 
   - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 300, m_{#tilde{#chi^{0}_{1}}} = 100"
     files:
-      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000008.MGPy8EG_A14N23LO_C1N2_Wh_300p0_100p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000003.MGPy8EG_A14N23LO_C1N2_WZ_300p0_100p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
     styles:
       legendstyle: L
       drawstyle: hist
@@ -160,7 +160,7 @@ groups:
 
   - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 500, m_{#tilde{#chi^{0}_{1}}} = 0"
     files:
-      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000007.MGPy8EG_A14N23LO_C1N2_Wh_500p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000002.MGPy8EG_A14N23LO_C1N2_WZ_500p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
     styles:
       legendstyle: L
       drawstyle: hist
@@ -169,34 +169,7 @@ groups:
 
   - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 500, m_{#tilde{#chi^{0}_{1}}} = 100"
     files:
-      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000006.MGPy8EG_A14N23LO_C1N2_Wh_500p0_100p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
-    styles:
-      legendstyle: L
-      drawstyle: hist
-      linewidth: 2
-    stack it: false
-
-  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 600, m_{#tilde{#chi^{0}_{1}}} = 0"
-    files:
-      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000014.MGPy8EG_A14N23LO_C1N2_Wh_600p0_0p0_bbqq_J10.DAOD_SUSY10.20170506_2.1.1.1_EXT0.merged.hists
-    styles:
-      legendstyle: L
-      drawstyle: hist
-      linewidth: 2
-    stack it: false
-
-  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 800, m_{#tilde{#chi^{0}_{1}}} = 0"
-    files:
-      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000012.MGPy8EG_A14N23LO_C1N2_Wh_800p0_0p0_bbqq_J10.DAOD_SUSY10.20170506_2.1.1.1_EXT0.merged.hists
-    styles:
-      legendstyle: L
-      drawstyle: hist
-      linewidth: 2
-    stack it: false
-
-  - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 800, m_{#tilde{#chi^{0}_{1}}} = 200"
-    files:
-      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000011.MGPy8EG_A14N23LO_C1N2_Wh_800p0_200p0_bbqq_J10.DAOD_SUSY10.20170506_2.1.1.1_EXT0.merged.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/user.jolsson.mc15_13TeV.000001.MGPy8EG_A14N23LO_C1N2_WZ_500p0_100p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
     styles:
       legendstyle: L
       drawstyle: hist
