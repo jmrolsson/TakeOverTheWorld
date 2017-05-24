@@ -22,6 +22,7 @@ parser.add_argument('--treename', required=False, type=str, dest='treename', met
 parser.add_argument('--eventWeight', required=False, type=str, dest='eventWeightBranch', metavar='', help='Event Weight Branch name', default='weight')
 parser.add_argument('--newOutputs', action='store_true', default=False, help='create new output files for histograms')
 parser.add_argument('--doNotOverwrite', action='store_true', default=False, help='skip existing .hists files')
+parser.add_argument('--copyHists', type=str, required=False, nargs='+', dest='hists', metavar='<histname>', help='List of histograms to copy (if any) from the input file')
 parser.add_argument('-o', required=False, type=str, dest='output_folder', metavar='', help='Specify folder where to store output files', default='')
 
 # parse the arguments, throw errors if missing any
@@ -40,6 +41,10 @@ for f in args.files:
     if (args.doNotOverwrite and os.path.isfile(out_file_path)): continue
     out_file = root_open(out_file_path, "RECREATE")
     tree = in_file.get(args.treename)
+    if (len(args.hists)>0):
+        out_file.cd()
+        for hist in args.hists:
+            in_file.Get(hist).Write()
   else:
     out_file = root_open(f, "UPDATE")
     tree = out_file.get(args.treename)

@@ -7615,6 +7615,38 @@
     "num events": 30861.7351186, 
     "rel uncert": 1.0
   },
+  "000023": {
+    "cross section": 0.00134352, 
+    "errors": [], 
+    "filter efficiency": 1.0, 
+    "k-factor": 1.0, 
+    "num events": 30349.2160046, 
+    "rel uncert": 1.0
+  },
+  "000024": {
+    "cross section": 0.00475843, 
+    "errors": [], 
+    "filter efficiency": 1.0, 
+    "k-factor": 1.0, 
+    "num events": 30289.0790449, 
+    "rel uncert": 1.0
+  },
+  "000025": {
+    "cross section": 0.00475843, 
+    "errors": [], 
+    "filter efficiency": 1.0, 
+    "k-factor": 1.0, 
+    "num events": 30461.135726, 
+    "rel uncert": 1.0
+  },
+  "000026": {
+    "cross section": 0.0201372, 
+    "errors": [], 
+    "filter efficiency": 1.0, 
+    "k-factor": 1.0, 
+    "num events": 30675.2314687, 
+    "rel uncert": 1.0
+  },
   "unknown": {
     "cross section": 0.0,
     "errors": [],

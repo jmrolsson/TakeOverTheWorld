@@ -230,33 +230,33 @@ cutflows:
     # hists/metG350_nJetsEq4_nBJets85Geq1Leq2_dphiSum4jetG2p6_MinvbbG90L150_MinvNonbbG50L120_MeffG500_MctbbG280/cutflow:
     #   outfile: "./cutflow_resolved/metG350_nJetsEq4_nBJets85Geq1Leq2_dphiSum4jetG2p6_MinvbbG90L150_MinvNonbbG50L120_MeffG500_MctbbG280.txt"
     #   label: "MET > 350 GeV, Meff > 500 GeV, N_jets == 4, 1 <= N_bjets_85 <= 2, dPhi(diboson,MET) > 2.6, 90 < Minv_bb/GeV < 150, 50 < Minv_non_bb/GeV < 120, Mctbb > 280 GeV"
-    # ## cutflow_MctbbG160_Wh_optimization_May20 
-    # hists/optimization_200_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG350_MeffG1100_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110/cutflow:
-    #   outfile: "cutflow_resolved/optimization_Wh_200_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG350_MeffG1100_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110.txt"
-    #   label: "4 <= N_jets <= 5, 1 <= N_bjets <= 2, MET > 350 GeV, Meff > 1100 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 100 < M_bb/GeV < 140, 60 < M_non_bb/GeV < 110"
-    # hists/optimization_300_100_nJetsEq4_nBJetsGeq1Leq2_metG250_MeffG1000_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110/cutflow:
-    #   outfile: "cutflow_resolved/optimization_Wh_300_100_nJetsEq4_nBJetsGeq1Leq2_metG250_MeffG1000_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110.txt"
-    #   label: "N_jets = 4, 1 <= N_bjets <= 2, MET > 250 GeV, Meff > 1000 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 100 < M_bb/GeV < 140, 60 < M_non_bb/GeV < 110"
-    # hists/optimization_400_0_nJetsEq4_nBJetsGeq1Leq2_metG300_MeffG1100_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110/cutflow:
-    #   outfile: "cutflow_resolved/optimization_Wh_400_0_nJetsEq4_nBJetsGeq1Leq2_metG300_MeffG1100_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110.txt"
-    #   label: "N_jets = 4, 1 <= N_bjets <= 2, MET > 300 GeV, Meff > 1100 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 100 < M_bb/GeV < 140, 60 < M_non_bb/GeV < 110"
-    # hists/optimization_600_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG450_MeffG600_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110/cutflow:
-    #   outfile: "cutflow_resolved/optimization_Wh_600_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG450_MeffG600_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110.txt"
-    #   label: "4 <= N_jets <= 5, 1 <= N_bjets <= 2, MET > 450 GeV, Meff > 600 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 100 < M_bb/GeV < 140, 60 < M_non_bb/GeV < 110"
-    # hists/optimization_800_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG450_MeffG1200_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110/cutflow:
-    #   outfile: "cutflow_resolved/optimization_Wh_800_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG450_MeffG1200_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110.txt"
-    #   label: "4 <= N_jets <= 5, 1 <= N_bjets <= 2, MET > 450 GeV, Meff > 1200 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 100 < M_bb/GeV < 140, 60 < M_non_bb/GeV < 110"
-
     ## cutflow_MctbbG160_Wh_optimization_May20 
-    hists/optimization_300_100_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG300_MeffG900_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110/cutflow:
-      outfile: "cutflow_resolved/optimization_WZ_300_100_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG300_MeffG900_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110.txt"
-      label: "4 <= N_jets <= 5, 1 <= N_bjets <= 2, MET > 300 GeV, Meff > 900 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 60 < M_bb/GeV < 110, 60 < M_non_bb/GeV < 110"
-    hists/optimization_300_0_nJetsEq4_nBJetsGeq1Leq2_metG400_MeffG1000_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110/cutflow:
-      outfile: "cutflow_resolved/optimization_WZ_300_0_nJetsEq4_nBJetsGeq1Leq2_metG400_MeffG1000_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110.txt"
-      label: "N_jets = 4, 1 <= N_bjets <= 2, MET > 400 GeV, Meff > 1000 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 60 < M_bb/GeV < 110, 60 < M_non_bb/GeV < 110"
-    hists/optimization_500_100_nJetsEq4_nBJetsGeq1Leq2_metG350_MeffG900_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110/cutflow:
-      outfile: "cutflow_resolved/optimization_WZ_500_100_nJetsEq4_nBJetsGeq1Leq2_metG350_MeffG900_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110.txt"
-      label: "N_jets = 4, 1 <= N_bjets <= 2, MET > 350 GeV, Meff > 900 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 60 < M_bb/GeV < 110, 60 < M_non_bb/GeV < 110"
-    hists/optimization_500_0_nJetsEq4_nBJetsGeq1Leq2_metG300_MeffG900_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110/cutflow:
-      outfile: "cutflow_resolved/optimization_WZ_500_0_nJetsEq4_nBJetsGeq1Leq2_metG300_MeffG900_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110.txt"
-      label: "N_jets = 4, 1 <= N_bjets <= 2, MET > 300 GeV, Meff > 900 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 60 < M_bb/GeV < 110, 60 < M_non_bb/GeV < 110"
+    hists/optimization_200_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG350_MeffG1100_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110/cutflow:
+      outfile: "cutflow_resolved/optimization_Wh_200_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG350_MeffG1100_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110.txt"
+      label: "4 <= N_jets <= 5, 1 <= N_bjets <= 2, MET > 350 GeV, Meff > 1100 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 100 < M_bb/GeV < 140, 60 < M_non_bb/GeV < 110"
+    hists/optimization_300_100_nJetsEq4_nBJetsGeq1Leq2_metG250_MeffG1000_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110/cutflow:
+      outfile: "cutflow_resolved/optimization_Wh_300_100_nJetsEq4_nBJetsGeq1Leq2_metG250_MeffG1000_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110.txt"
+      label: "N_jets = 4, 1 <= N_bjets <= 2, MET > 250 GeV, Meff > 1000 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 100 < M_bb/GeV < 140, 60 < M_non_bb/GeV < 110"
+    hists/optimization_400_0_nJetsEq4_nBJetsGeq1Leq2_metG300_MeffG1100_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110/cutflow:
+      outfile: "cutflow_resolved/optimization_Wh_400_0_nJetsEq4_nBJetsGeq1Leq2_metG300_MeffG1100_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110.txt"
+      label: "N_jets = 4, 1 <= N_bjets <= 2, MET > 300 GeV, Meff > 1100 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 100 < M_bb/GeV < 140, 60 < M_non_bb/GeV < 110"
+    hists/optimization_600_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG450_MeffG600_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110/cutflow:
+      outfile: "cutflow_resolved/optimization_Wh_600_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG450_MeffG600_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110.txt"
+      label: "4 <= N_jets <= 5, 1 <= N_bjets <= 2, MET > 450 GeV, Meff > 600 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 100 < M_bb/GeV < 140, 60 < M_non_bb/GeV < 110"
+    hists/optimization_800_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG450_MeffG1200_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110/cutflow:
+      outfile: "cutflow_resolved/optimization_Wh_800_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG450_MeffG1200_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110.txt"
+      label: "4 <= N_jets <= 5, 1 <= N_bjets <= 2, MET > 450 GeV, Meff > 1200 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 100 < M_bb/GeV < 140, 60 < M_non_bb/GeV < 110"
+
+    ## cutflow_MctbbG160_NjetGeq3Leq5_Wh_optimization_May21
+    # hists/optimization_300_100_nJetsGeq3Leq5_nBJetsGeq1Leq2_metG250_MeffG1000_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110/cutflow:
+    #   outfile: "cutflow_resolved/optimization_Wh_300_100_nJetsGeq3Leq5_nBJetsGeq1Leq2_metG250_MeffG1000_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110.txt"
+    #   label: "3 <= N_jets <= 5, 1 <= N_bjets <= 2, MET > 250 GeV, Meff > 1000 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 100 < M_bb/GeV < 140, 60 < M_non_bb/GeV < 110"
+    # hists/optimization_400_0_nJetsGeq3Leq5_nBJetsGeq1Leq2_metG300_MeffG900_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110/cutflow:
+    #   outfile: "cutflow_resolved/optimization_Wh_400_0_nJetsGeq3Leq5_nBJetsGeq1Leq2_metG300_MeffG900_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110.txt"
+    #   label: "3 <= N_jets <= 5, 1 <= N_bjets <= 2, MET > 300 GeV, Meff > 900 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 100 < M_bb/GeV < 140, 60 < M_non_bb/GeV < 110"
+    # hists/optimization_600_0_nJetsGeq3Leq5_nBJetsGeq1Leq2_metG450_MeffG850_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110/cutflow:
+    #   outfile: "cutflow_resolved/optimization_Wh_600_0_nJetsGeq3Leq5_nBJetsGeq1Leq2_metG450_MeffG850_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110.txt"
+    #   label: "3 <= N_jets <= 5, 1 <= N_bjets <= 2, MET > 450 GeV, Meff > 850 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 100 < M_bb/GeV < 140, 60 < M_non_bb/GeV < 110"
+    # hists/optimization_800_0_nJetsGeq3Leq5_nBJetsGeq1Leq2_metG600_MeffG800_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110/cutflow:
+    #   outfile: "cutflow_resolved/optimization_Wh_800_0_nJetsGeq3Leq5_nBJetsGeq1Leq2_metG600_MeffG800_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110.txt"
+    #   label: "3 <= N_jets <= 5, 1 <= N_bjets <= 2, MET > 600 GeV, Meff > 800 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 100 < M_bb/GeV < 140, 60 < M_non_bb/GeV < 110"

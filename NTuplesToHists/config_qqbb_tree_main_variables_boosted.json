@@ -63,13 +63,6 @@
       "nbins": 10
     },
     {
-      "draw": "ak10_jets_assoc_ak4_non_btag_n",
-      "name": "ak10_jets_assoc_ak4_non_btag_n",
-      "min": 0,
-      "max": 10,
-      "nbins": 10
-    },
-    {
       "draw": "ak10_jets_pt[0]",
       "name": "ak10_pt_jet_1",
       "min": 0,
@@ -163,6 +156,482 @@
     {
       "draw": "ak10_jets_D2[1]",
       "name": "ak10_D2_jet_2",
+      "min": 0,
+      "max": 5.0,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R08PT10_jets_n",
+      "name": "rc_R08PT10_jets_n",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "rc_R08PT10_jets_nconst",
+      "name": "rc_R08PT10_jets_nconst",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "rc_R08PT10_jets_nconst_btag",
+      "name": "rc_R08PT10_jets_nconst_btag",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "rc_R08PT10_jets_pt[0]",
+      "name": "rc_R08PT10_pt_jet_1",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R08PT10_jets_pt[1]",
+      "name": "rc_R08PT10_pt_jet_2",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R08PT10_jets_pt[2]",
+      "name": "rc_R08PT10_pt_jet_3",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R08PT10_jets_m[0]",
+      "name": "rc_R08PT10_m_jet_1",
+      "min": 0,
+      "max": 400,
+      "nbins": 80
+    },
+    {
+      "draw": "rc_R08PT10_jets_m[1]",
+      "name": "rc_R08PT10_m_jet_2",
+      "min": 0,
+      "max": 400,
+      "nbins": 80
+    },
+    {
+      "draw": "rc_R08PT10_jets_m[2]",
+      "name": "rc_R08PT10_m_jet_3",
+      "min": 0,
+      "max": 400,
+      "nbins": 80
+    },
+    {
+      "draw": "rc_R08PT10_jets_tau21[0]",
+      "name": "rc_R08PT10_tau211",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R08PT10_jets_tau21[1]",
+      "name": "rc_R08PT10_tau212",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R08PT10_jets_tau32[0]",
+      "name": "rc_R08PT10_tau321",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R08PT10_jets_tau32[1]",
+      "name": "rc_R08PT10_tau322",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R08PT10_jets_C2[0]",
+      "name": "rc_R08PT10_C2_jet_1",
+      "min": 0,
+      "max": 1.0,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R08PT10_jets_C2[1]",
+      "name": "rc_R08PT10_C2_jet_2",
+      "min": 0,
+      "max": 1.0,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R08PT10_jets_D2[0]",
+      "name": "rc_R08PT10_D2_jet_1",
+      "min": 0,
+      "max": 5.0,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R08PT10_jets_D2[1]",
+      "name": "rc_R08PT10_D2_jet_2",
+      "min": 0,
+      "max": 5.0,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R10PT10_jets_n",
+      "name": "rc_R10PT10_jets_n",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "rc_R10PT10_jets_nconst",
+      "name": "rc_R10PT10_jets_nconst",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "rc_R10PT10_jets_nconst_btag",
+      "name": "rc_R10PT10_jets_nconst_btag",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "rc_R10PT10_jets_pt[0]",
+      "name": "rc_R10PT10_pt_jet_1",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R10PT10_jets_pt[1]",
+      "name": "rc_R10PT10_pt_jet_2",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R10PT10_jets_pt[2]",
+      "name": "rc_R10PT10_pt_jet_3",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R10PT10_jets_m[0]",
+      "name": "rc_R10PT10_m_jet_1",
+      "min": 0,
+      "max": 400,
+      "nbins": 80
+    },
+    {
+      "draw": "rc_R10PT10_jets_m[1]",
+      "name": "rc_R10PT10_m_jet_2",
+      "min": 0,
+      "max": 400,
+      "nbins": 80
+    },
+    {
+      "draw": "rc_R10PT10_jets_m[2]",
+      "name": "rc_R10PT10_m_jet_3",
+      "min": 0,
+      "max": 400,
+      "nbins": 80
+    },
+    {
+      "draw": "rc_R10PT10_jets_tau21[0]",
+      "name": "rc_R10PT10_tau211",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R10PT10_jets_tau21[1]",
+      "name": "rc_R10PT10_tau212",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R10PT10_jets_tau32[0]",
+      "name": "rc_R10PT10_tau321",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R10PT10_jets_tau32[1]",
+      "name": "rc_R10PT10_tau322",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R10PT10_jets_C2[0]",
+      "name": "rc_R10PT10_C2_jet_1",
+      "min": 0,
+      "max": 1.0,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R10PT10_jets_C2[1]",
+      "name": "rc_R10PT10_C2_jet_2",
+      "min": 0,
+      "max": 1.0,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R10PT10_jets_D2[0]",
+      "name": "rc_R10PT10_D2_jet_1",
+      "min": 0,
+      "max": 5.0,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R10PT10_jets_D2[1]",
+      "name": "rc_R10PT10_D2_jet_2",
+      "min": 0,
+      "max": 5.0,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R12PT10_jets_n",
+      "name": "rc_R12PT10_jets_n",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "rc_R12PT10_jets_nconst",
+      "name": "rc_R12PT10_jets_nconst",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "rc_R12PT10_jets_nconst_btag",
+      "name": "rc_R12PT10_jets_nconst_btag",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "rc_R12PT10_jets_pt[0]",
+      "name": "rc_R12PT10_pt_jet_1",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R12PT10_jets_pt[1]",
+      "name": "rc_R12PT10_pt_jet_2",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R12PT10_jets_pt[2]",
+      "name": "rc_R12PT10_pt_jet_3",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R12PT10_jets_m[0]",
+      "name": "rc_R12PT10_m_jet_1",
+      "min": 0,
+      "max": 400,
+      "nbins": 80
+    },
+    {
+      "draw": "rc_R12PT10_jets_m[1]",
+      "name": "rc_R12PT10_m_jet_2",
+      "min": 0,
+      "max": 400,
+      "nbins": 80
+    },
+    {
+      "draw": "rc_R12PT10_jets_m[2]",
+      "name": "rc_R12PT10_m_jet_3",
+      "min": 0,
+      "max": 400,
+      "nbins": 80
+    },
+    {
+      "draw": "rc_R12PT10_jets_tau21[0]",
+      "name": "rc_R12PT10_tau211",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R12PT10_jets_tau21[1]",
+      "name": "rc_R12PT10_tau212",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R12PT10_jets_tau32[0]",
+      "name": "rc_R12PT10_tau321",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R12PT10_jets_tau32[1]",
+      "name": "rc_R12PT10_tau322",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R12PT10_jets_C2[0]",
+      "name": "rc_R12PT10_C2_jet_1",
+      "min": 0,
+      "max": 1.0,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R12PT10_jets_C2[1]",
+      "name": "rc_R12PT10_C2_jet_2",
+      "min": 0,
+      "max": 1.0,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R12PT10_jets_D2[0]",
+      "name": "rc_R12PT10_D2_jet_1",
+      "min": 0,
+      "max": 5.0,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R12PT10_jets_D2[1]",
+      "name": "rc_R12PT10_D2_jet_2",
+      "min": 0,
+      "max": 5.0,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R15PT10_jets_n",
+      "name": "rc_R15PT10_jets_n",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "rc_R15PT10_jets_nconst",
+      "name": "rc_R15PT10_jets_nconst",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "rc_R15PT10_jets_nconst_btag",
+      "name": "rc_R15PT10_jets_nconst_btag",
+      "min": 0,
+      "max": 10,
+      "nbins": 10
+    },
+    {
+      "draw": "rc_R15PT10_jets_pt[0]",
+      "name": "rc_R15PT10_pt_jet_1",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R15PT10_jets_pt[1]",
+      "name": "rc_R15PT10_pt_jet_2",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R15PT10_jets_pt[2]",
+      "name": "rc_R15PT10_pt_jet_3",
+      "min": 0,
+      "max": 1000,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R15PT10_jets_m[0]",
+      "name": "rc_R15PT10_m_jet_1",
+      "min": 0,
+      "max": 400,
+      "nbins": 80
+    },
+    {
+      "draw": "rc_R15PT10_jets_m[1]",
+      "name": "rc_R15PT10_m_jet_2",
+      "min": 0,
+      "max": 400,
+      "nbins": 80
+    },
+    {
+      "draw": "rc_R15PT10_jets_m[2]",
+      "name": "rc_R15PT10_m_jet_3",
+      "min": 0,
+      "max": 400,
+      "nbins": 80
+    },
+    {
+      "draw": "rc_R15PT10_jets_tau21[0]",
+      "name": "rc_R15PT10_tau211",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R15PT10_jets_tau21[1]",
+      "name": "rc_R15PT10_tau212",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R15PT10_jets_tau32[0]",
+      "name": "rc_R15PT10_tau321",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R15PT10_jets_tau32[1]",
+      "name": "rc_R15PT10_tau322",
+      "min": 0,
+      "max": 1,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R15PT10_jets_C2[0]",
+      "name": "rc_R15PT10_C2_jet_1",
+      "min": 0,
+      "max": 1.0,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R15PT10_jets_C2[1]",
+      "name": "rc_R15PT10_C2_jet_2",
+      "min": 0,
+      "max": 1.0,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R15PT10_jets_D2[0]",
+      "name": "rc_R15PT10_D2_jet_1",
+      "min": 0,
+      "max": 5.0,
+      "nbins": 100
+    },
+    {
+      "draw": "rc_R15PT10_jets_D2[1]",
+      "name": "rc_R15PT10_D2_jet_2",
       "min": 0,
       "max": 5.0,
       "nbins": 100

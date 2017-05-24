@@ -1,0 +1,23 @@
+{
+  "cuts": [
+    {"cut": "baseline_electrons_n==0 && baseline_muons_n==0 && jets_n>=4 && jets_n<=5 && bjets_n>=1 && bjets_n<=2 && met>350 && meff_4j > 1100 && mct_bb > 160 && dphi_sum4jet>2.6 && minv_bb>100 && minv_bb<140 && minv_non_bb>60 && minv_non_bb<110",
+    "name": "optimization_200_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG350_MeffG1100_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110"},
+    {"cut": "baseline_electrons_n==0 && baseline_muons_n==0 && jets_n==4 && bjets_n>=1 && bjets_n<=2 && met>250 && meff_4j > 1000 && mct_bb > 160 && dphi_sum4jet>2.6 && minv_bb>100 && minv_bb<140 && minv_non_bb>60 && minv_non_bb<110",
+    "name": "optimization_300_100_nJetsEq4_nBJetsGeq1Leq2_metG250_MeffG1000_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110"},
+    {"cut": "baseline_electrons_n==0 && baseline_muons_n==0 && jets_n==4 && bjets_n>=1 && bjets_n<=2 && met>300 && meff_4j > 1100 && mct_bb > 160 && dphi_sum4jet>2.6 && minv_bb>100 && minv_bb<140 && minv_non_bb>60 && minv_non_bb<110",
+    "name": "optimization_400_0_nJetsEq4_nBJetsGeq1Leq2_metG300_MeffG1100_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110"},
+    {"cut": "baseline_electrons_n==0 && baseline_muons_n==0 && jets_n>=4 && jets_n<=5 && bjets_n>=1 && bjets_n<=2 && met>450 && meff_4j > 600 && mct_bb > 160 && dphi_sum4jet>2.6 && minv_bb>100 && minv_bb<140 && minv_non_bb>60 && minv_non_bb<110",
+    "name": "optimization_600_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG450_MeffG600_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110"},
+    {"cut": "baseline_electrons_n==0 && baseline_muons_n==0 && jets_n>=4 && jets_n<=5 && bjets_n>=1 && bjets_n<=2 && met>450 && meff_4j > 1200 && mct_bb > 160 && dphi_sum4jet>2.6 && minv_bb>100 && minv_bb<140 && minv_non_bb>60 && minv_non_bb<110",
+    "name": "optimization_800_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG450_MeffG1200_MctbbG160_dphiSum4jetG2p6_MinvbbG100L140_MinvNonbbG60L110"}
+  ],
+  "draw": [
+    {
+      "draw": "n_vtx",
+      "name": "cutflow",
+      "min": -1e8,
+      "max": 1e8,
+      "nbins": 1
+    }
+  ]
+}

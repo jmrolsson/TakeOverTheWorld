@@ -1,0 +1,148 @@
+---
+# defines background groups for the cutflows
+# wildcards for file patterns are allowed
+# NOTE indentation matters
+#
+# ex. 
+# backgrounds:
+#   - name: dijets
+#     files:
+#       - *36102*.hists
+#   - name: "t#bar{t}" 
+#     files:
+#       - *ttbar*.hists     
+# 
+backgrounds:
+
+  # - name: "dijet"
+  #   files:
+  #     - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*361022*.hists
+  #     - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*361023*.hists
+  #     - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*361024*.hists
+  #     - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*361025*.hists
+  #     - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*361026*.hists
+  #     - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*361027*.hists
+  #     - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*361028*.hists
+
+  - name: "dijet_JZ1W"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*361021*.hists
+  - name: "dijet_JZ2W"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*361022*.hists
+  - name: "dijet_JZ3W"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*361023*.hists
+  - name: "dijet_JZ4W"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*361024*.hists
+  - name: "dijet_JZ5W"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*361025*.hists
+  - name: "dijet_JZ6W"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*361026*.hists
+  - name: "dijet_JZ7W"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*361027*.hists
+  - name: "dijet_JZ8W"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*361028*.hists
+
+  - name: "diboson"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*diboson*.hists
+
+  # - name: "t#bar{t}"
+  - name: "ttbar"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*ttbar*.hists
+
+  - name: "singletop"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*singletop*.hists
+
+  # - name: "t#bar{t}+V"
+  - name: "ttbar+V"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*topEW*.hists
+
+  - name: "W+jets"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*W_sherpa*.hists
+
+  - name: "Z+jets"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/*Z_sherpa*.hists
+
+# defined analogously for signal samples
+# one group per signal sample is required
+signals:
+
+  # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 150, m_{#tilde{#chi^{0}_{1}}} = 0"
+  - name: "m_C1/N2 = 150, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/user.jolsson.mc15_13TeV.000005.MGPy8EG_A14N23LO_C1N2_WZ_150p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+
+  # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 300, m_{#tilde{#chi^{0}_{1}}} = 0"
+  - name: "m_C1/N2 = 300, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/user.jolsson.mc15_13TeV.000004.MGPy8EG_A14N23LO_C1N2_WZ_300p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+
+  # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 300, m_{#tilde{#chi^{0}_{1}}} = 100"
+  - name: "m_C1/N2 = 300, m_N2 = 100"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/user.jolsson.mc15_13TeV.000003.MGPy8EG_A14N23LO_C1N2_WZ_300p0_100p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+
+  # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 500, m_{#tilde{#chi^{0}_{1}}} = 0"
+  - name: "m_C1/N2 = 500, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/user.jolsson.mc15_13TeV.000002.MGPy8EG_A14N23LO_C1N2_WZ_500p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+
+  # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 500, m_{#tilde{#chi^{0}_{1}}} = 100"
+  - name: "m_C1/N2 = 500, m_N2 = 100"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/user.jolsson.mc15_13TeV.000001.MGPy8EG_A14N23LO_C1N2_WZ_500p0_100p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+
+  # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 600, m_{#tilde{#chi^{0}_{1}}} = 0"
+  - name: "m_C1/N2 = 600, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/user.jolsson.mc15_13TeV.000026.MGPy8EG_A14N23LO_C1N2_WZ_600p0_0p0_bbqq_J10.DAOD_SUSY10.20170516_1.1.1.1_EXT0.merged.hists
+
+  # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 800, m_{#tilde{#chi^{0}_{1}}} = 0"
+  - name: "m_C1/N2 = 800, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/user.jolsson.mc15_13TeV.000025.MGPy8EG_A14N23LO_C1N2_WZ_800p0_0p0_bbqq_J10.DAOD_SUSY10.20170516_1.1.1.1_EXT0.merged.hists
+
+  # - name: "m_{#tilde{#chi^{#pm}_{1}},#tilde{#chi^{0}_{2}}} = 1000, m_{#tilde{#chi^{0}_{1}}} = 0"
+  - name: "m_C1/N2 = 1000, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/user.jolsson.mc15_13TeV.000023.MGPy8EG_A14N23LO_C1N2_WZ_1000p0_0p0_bbqq_J10.DAOD_SUSY10.20170516_1.1.1.1_EXT0.merged.hists
+
+# specify the path to each cutflow histogram
+# one cutflow will be saved for each path
+cutflows:
+  paths:
+
+    ## cutflow_MctbbG160_Wh_optimization_May20 
+    # hists/optimization_300_100_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG300_MeffG900_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110/cutflow:
+    #   outfile: "cutflow_resolved/optimization_WZ_300_100_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG300_MeffG900_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110.txt"
+    #   label: "4 <= N_jets <= 5, 1 <= N_bjets <= 2, MET > 300 GeV, Meff > 900 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 60 < M_bb/GeV < 110, 60 < M_non_bb/GeV < 110"
+    # hists/optimization_300_0_nJetsEq4_nBJetsGeq1Leq2_metG400_MeffG1000_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110/cutflow:
+    #   outfile: "cutflow_resolved/optimization_WZ_300_0_nJetsEq4_nBJetsGeq1Leq2_metG400_MeffG1000_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110.txt"
+    #   label: "N_jets = 4, 1 <= N_bjets <= 2, MET > 400 GeV, Meff > 1000 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 60 < M_bb/GeV < 110, 60 < M_non_bb/GeV < 110"
+    # hists/optimization_500_100_nJetsEq4_nBJetsGeq1Leq2_metG350_MeffG900_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110/cutflow:
+    #   outfile: "cutflow_resolved/optimization_WZ_500_100_nJetsEq4_nBJetsGeq1Leq2_metG350_MeffG900_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110.txt"
+    #   label: "N_jets = 4, 1 <= N_bjets <= 2, MET > 350 GeV, Meff > 900 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 60 < M_bb/GeV < 110, 60 < M_non_bb/GeV < 110"
+    # hists/optimization_500_0_nJetsEq4_nBJetsGeq1Leq2_metG300_MeffG900_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110/cutflow:
+    #   outfile: "cutflow_resolved/optimization_WZ_500_0_nJetsEq4_nBJetsGeq1Leq2_metG300_MeffG900_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110.txt"
+    #   label: "N_jets = 4, 1 <= N_bjets <= 2, MET > 300 GeV, Meff > 900 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 60 < M_bb/GeV < 110, 60 < M_non_bb/GeV < 110"
+    hists/optimization_600_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG450_MeffG1000_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110/cutflow:
+      outfile: "cutflow_resolved/optimization_WZ_600_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG450_MeffG1000_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110.txt"
+      label: "4 <= N_jets <= 5, 1 <= N_bjets <= 2, MET > 450 GeV, Meff > 1000 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 60 < M_bb/GeV < 110, 60 < M_non_bb/GeV < 110"
+    hists/optimization_800_0_nJetsGeq4Leq6_nBJetsGeq1Leq2_metG450_MeffG1100_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110/cutflow:
+      outfile: "cutflow_resolved/optimization_WZ_800_0_nJetsGeq4Leq6_nBJetsGeq1Leq2_metG450_MeffG1100_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110.txt"
+      label: "4 <= N_jets <= 6, 1 <= N_bjets <= 2, MET > 450 GeV, Meff > 1100 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 60 < M_bb/GeV < 110, 60 < M_non_bb/GeV < 110"
+    hists/optimization_1000_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG400_MeffG1100_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110/cutflow:
+      outfile: "cutflow_resolved/optimization_WZ_1000_0_nJetsGeq4Leq5_nBJetsGeq1Leq2_metG400_MeffG1100_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110.txt"
+      label: "4 <= N_jets <= 5, 1 <= N_bjets <= 2, MET > 400 GeV, Meff > 1100 GeV, Mctbb > 160 GeV, dPhi(diboson,MET) > 2.6, 60 < M_bb/GeV < 110, 60 < M_non_bb/GeV < 110"
