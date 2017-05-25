@@ -306,7 +306,7 @@ def save_detailed_cutflow(cuts_sig, cuts_bkg, tag='<cutflow>', outfile='detailed
     if do_latex:
       print(r"\multicolumn{11}{c}{Signal sample: $\mheavy = 400\gev, \mneut = 200\gev$} \\[0.2cm]", file=f)
     else:
-      print(toprule, file=f)
+      print(tag, file=f)
     print(toprule, file=f)
     if do_latex:
       print(r"Cut & {$N_S^{\rm raw}$} & {$N_S$} & {$\eff_S$} & {$\releff_S$} & {$N_{B}^{\rm raw}$} & {$N_B$} & {$\eff_B$} & {$\releff_B$} & {$N_S/\sqrt{N_B}$} & {$\Zn$} \\", file=f)

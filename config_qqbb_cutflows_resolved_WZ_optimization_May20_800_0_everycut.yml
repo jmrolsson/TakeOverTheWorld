@@ -99,8 +99,8 @@ cutflows:
   paths:
     hists/all/cutflow:
       label: "All events"
-    # hists/default/cutflow:
-    #   label: "Preselection"
+    hists/default/cutflow:
+      label: "Preselection"
     hists/lepton_veto/cutflow:
       label: "Lepton veto"
     hists/optimization_800_0_nJetsGeq4Leq6/cutflow:

@@ -1,0 +1,35 @@
+{
+  "cuts": [
+    {"cut": "1",
+    "name": "default"},
+    {"cut": "baseline_electrons_n==0 && baseline_muons_n==0 && jets_n>=4 && jets_n<=6 && bjets_n>=1 && bjets_n<=2 && met>450 && meff_4j > 1100 && mct_bb > 160 && dphi_sum4jet>2.6",
+    "name": "optim_WZ_800_0_nJetsGeq4Leq6_nBJetsGeq1Leq2_metG450_MeffG1100_MctbbG160_dphiSum4jetG2p6"},
+    {"cut": "baseline_electrons_n==0 && baseline_muons_n==0 && jets_n>=4 && jets_n<=6 && bjets_n>=1 && bjets_n<=2 && met>450 && meff_4j > 1100 && mct_bb > 160 && dphi_sum4jet>2.6 && minv_bb>60 && minv_bb<110",
+    "name": "optim_WZ_800_0_nJetsGeq4Leq6_nBJetsGeq1Leq2_metG450_MeffG1100_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110"},
+    {"cut": "baseline_electrons_n==0 && baseline_muons_n==0 && jets_n>=4 && jets_n<=6 && bjets_n>=1 && bjets_n<=2 && met>450 && meff_4j > 1100 && mct_bb > 160 && dphi_sum4jet>2.6 && minv_bb>60 && minv_bb<110 && minv_non_bb>60 && minv_non_bb<110",
+    "name": "optim_WZ_800_0_nJetsGeq4Leq6_nBJetsGeq1Leq2_metG450_MeffG1100_MctbbG160_dphiSum4jetG2p6_MinvbbG60L110_MinvNonbbG60L110"}
+  ],
+  "draw": [
+    {
+      "draw": "n_vtx",
+      "name": "cutflow",
+      "min": -1e8,
+      "max": 1e8,
+      "nbins": 1
+    },
+    {
+      "draw": "minv_bb",
+      "name": "minv_bb",
+      "min": 0,
+      "max": 2000,
+      "nbins": 200
+    },
+    {
+      "draw": "minv_non_bb",
+      "name": "minv_non_bb",
+      "min": 0,
+      "max": 2000,
+      "nbins": 200
+    }
+  ]
+}
