@@ -6,6 +6,7 @@ from rootpy.io import root_open
 from rootpy.plotting import Hist, Hist2D, Hist3D
 from rootpy.plotting import set_style
 from rootpy.tree import Tree, TreeChain
+import numpy as np
 
 import argparse
 
@@ -23,6 +24,7 @@ parser.add_argument('--eventWeight', required=False, type=str, dest='eventWeight
 parser.add_argument('--newOutputs', action='store_true', default=False, help='create new output files for histograms')
 parser.add_argument('--doNotOverwrite', action='store_true', default=False, help='skip existing .hists files')
 parser.add_argument('--copyHists', type=str, required=False, nargs='+', dest='hists', metavar='<histname>', help='List of histograms to copy (if any) from the input file')
+parser.add_argument('--copyMBJCutflow', action='store_true', dest='copy_mbj_cutflow', default=False, help='Copy the master cutflow named "cut_flow" used in MBJ')
 parser.add_argument('-o', required=False, type=str, dest='output_folder', metavar='', help='Specify folder where to store output files', default='')
 
 # parse the arguments, throw errors if missing any
@@ -41,10 +43,23 @@ for f in args.files:
     if (args.doNotOverwrite and os.path.isfile(out_file_path)): continue
     out_file = root_open(out_file_path, "RECREATE")
     tree = in_file.get(args.treename)
-    if (len(args.hists)>0):
-        out_file.cd()
-        for hist in args.hists:
-            in_file.Get(hist).Write()
+    if (args.hists != None and len(args.hists)>0):
+     out_file.cd()
+     for hist in args.hists:
+       in_file.Get(hist).Write()
+    if args.copy_mbj_cutflow:
+      cf = in_file.Get('cut_flow')
+      cf2 = Hist(1, 0, 1, name='cutflow')
+      cf2.Sumw2()
+      cf2.SetEntries(cf.GetBinContent(1))
+      cf2.SetBinContent(1, cf.GetBinContent(2))
+      cf2.SetBinError(1, np.sqrt(cf.GetBinContent(1))*cf.GetBinContent(2)/cf.GetBinContent(1))
+      allDir = os.path.join(args.outdir, 'all')
+      out_file.mkdir(allDir, recurse=True)
+      try: out_file.cd(allDir)
+      except: pass
+      cf2.Write()
+
   else:
     out_file = root_open(f, "UPDATE")
     tree = out_file.get(args.treename)
@@ -55,10 +70,11 @@ for f in args.files:
   # for each thing to draw, we want to apply a selection on them too
   for cut in config['cuts']:
     innerDir = os.path.join(args.outdir, cut['name'])
-    try: out_file.rmdir(innerDir)
-    except: pass
-    try: out_file.rm(innerDir)
-    except: pass
+    if not args.copy_mbj_cutflow:
+      try: out_file.rmdir(innerDir)
+      except: pass
+      try: out_file.rm(innerDir)
+      except: pass
     try: out_file.mkdir(innerDir, recurse=True)
     except: pass
     try: out_file.cd(innerDir)

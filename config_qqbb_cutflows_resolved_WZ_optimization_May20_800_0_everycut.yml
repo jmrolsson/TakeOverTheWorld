@@ -1,0 +1,121 @@
+---
+# defines background groups for the cutflows
+# wildcards for file patterns are allowed
+# NOTE indentation matters
+#
+# ex. 
+# backgrounds:
+#   - name: dijets
+#     files:
+#       - *36102*.hists
+#   - name: "t#bar{t}" 
+#     files:
+#       - *ttbar*.hists     
+# 
+backgrounds:
+
+  - name: "dijet"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/*361021*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/*361022*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/*361023*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/*361024*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/*361025*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/*361026*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/*361027*.hists
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/*361028*.hists
+
+  - name: "diboson"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/*diboson*.hists
+
+  - name: "ttbar"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/*ttbar*.hists
+
+  - name: "singletop"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/*singletop*.hists
+
+  - name: "ttbar+V"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/*topEW*.hists
+
+  - name: "W+jets"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/*W_sherpa*.hists
+
+  - name: "Z+jets"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/*Z_sherpa*.hists
+
+# defined analogously for signal samples
+# one group per signal sample is required
+signals:
+
+  - name: "m_C1/N2 = 150, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/user.jolsson.mc15_13TeV.000005.MGPy8EG_A14N23LO_C1N2_WZ_150p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+    outfile: "cutflows_resolved/optimization_WZ_800_0_detailed_cutflow_masspoint_150_0.txt"
+
+  - name: "m_C1/N2 = 300, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/user.jolsson.mc15_13TeV.000004.MGPy8EG_A14N23LO_C1N2_WZ_300p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+    outfile: "cutflows_resolved/optimization_WZ_800_0_detailed_cutflow_masspoint_300_0.txt"
+
+  - name: "m_C1/N2 = 300, m_N2 = 100"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/user.jolsson.mc15_13TeV.000003.MGPy8EG_A14N23LO_C1N2_WZ_300p0_100p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+    outfile: "cutflows_resolved/optimization_WZ_800_0_detailed_cutflow_masspoint_300_100.txt"
+
+  - name: "m_C1/N2 = 500, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/user.jolsson.mc15_13TeV.000002.MGPy8EG_A14N23LO_C1N2_WZ_500p0_0p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+    outfile: "cutflows_resolved/optimization_WZ_800_0_detailed_cutflow_masspoint_500_0.txt"
+
+  - name: "m_C1/N2 = 500, m_N2 = 100"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/user.jolsson.mc15_13TeV.000001.MGPy8EG_A14N23LO_C1N2_WZ_500p0_100p0_bbqq_J10.DAOD_SUSY10.20170322_2.3.4.4_EXT0.merged.hists
+    outfile: "cutflows_resolved/optimization_WZ_800_0_detailed_cutflow_masspoint_500_100.txt"
+
+  - name: "m_C1/N2 = 600, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/user.jolsson.mc15_13TeV.000026.MGPy8EG_A14N23LO_C1N2_WZ_600p0_0p0_bbqq_J10.DAOD_SUSY10.20170516_1.1.1.1_EXT0.merged.hists
+    outfile: "cutflows_resolved/optimization_WZ_800_0_detailed_cutflow_masspoint_600_0.txt"
+
+  - name: "m_C1/N2 = 800, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/user.jolsson.mc15_13TeV.000025.MGPy8EG_A14N23LO_C1N2_WZ_800p0_0p0_bbqq_J10.DAOD_SUSY10.20170516_1.1.1.1_EXT0.merged.hists
+    outfile: "cutflows_resolved/optimization_WZ_800_0_detailed_cutflow_masspoint_800_0.txt"
+
+  - name: "m_C1/N2 = 1000, m_N2 = 0"
+    files:
+      - /Users/joakim/ewk/results/ewk_mbj_ntuples/histfitter/histograms/cutflow_MctbbG160_WZ_optimization_May20_800_0_everycut/user.jolsson.mc15_13TeV.000023.MGPy8EG_A14N23LO_C1N2_WZ_1000p0_0p0_bbqq_J10.DAOD_SUSY10.20170516_1.1.1.1_EXT0.merged.hists
+    outfile: "cutflows_resolved/optimization_WZ_800_0_detailed_cutflow_masspoint_1000_0.txt"
+
+# specify the path to each cutflow histogram
+# one cutflow is saved for each signal point (totw_cutflow.py with the '--detailed-cutflow 1' option
+cutflows:
+  paths:
+    hists/all/cutflow:
+      label: "All events"
+    # hists/default/cutflow:
+    #   label: "Preselection"
+    hists/lepton_veto/cutflow:
+      label: "Lepton veto"
+    hists/optimization_800_0_nJetsGeq4Leq6/cutflow:
+      label: "4 <= N_jets <= 5"
+    hists/optimization_800_0_nJetsGeq4Leq6_nBJetsGeq1Leq2/cutflow:
+      label: "1 <= N_b-jets <= 2"
+    hists/optimization_800_0_nJetsGeq4Leq6_nBJetsGeq1Leq2_metG450/cutflow:
+      label: "MET > 450 GeV"
+    hists/optimization_800_0_nJetsGeq4Leq6_nBJetsGeq1Leq2_metG450_MeffG1100/cutflow:
+      label: "Meff > 1200 GeV"
+    hists/optimization_800_0_nJetsGeq4Leq6_nBJetsGeq1Leq2_metG450_MeffG1100_dphiSum4jetG2p6/cutflow:
+      label: "dPhi(diboson,MET) > 2.6"
+    hists/optimization_800_0_nJetsGeq4Leq6_nBJetsGeq1Leq2_metG450_MeffG1100_dphiSum4jetG2p6_MctbbG160/cutflow:
+      label: "Mctbb > 160 GeV"
+    hists/optimization_800_0_nJetsGeq4Leq6_nBJetsGeq1Leq2_metG450_MeffG1100_dphiSum4jetG2p6_MctbbG160_MinvbbG60L110/cutflow:
+      label: "60 < M_bb/GeV < 110"
+    hists/optimization_800_0_nJetsGeq4Leq6_nBJetsGeq1Leq2_metG450_MeffG1100_dphiSum4jetG2p6_MctbbG160_MinvbbG60L110_MinvNonbbG60L110/cutflow:
+      label: "60 < M_non_bb/GeV < 110"
